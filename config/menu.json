@@ -1,0 +1,38 @@
+{
+  "main": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Resume",
+      "url": "/resume"
+    },
+    {
+      "name": "Projects",
+      "url": "/projects"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    }
+  ],
+  "footer": [
+    {
+      "name": "Home",
+      "url": "/"
+    },
+    {
+      "name": "Resume",
+      "url": "/resume"
+    },
+    {
+      "name": "Projects",
+      "url": "/project"
+    },
+    {
+      "name": "Blog",
+      "url": "/blog"
+    }
+  ]
+}
