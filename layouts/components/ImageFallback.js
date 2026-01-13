@@ -19,7 +19,7 @@ const ImageFallback = (props) => {
 
   // Use regular img tag for static export to avoid Next.js Image component issues
   return (
-    <Image
+    <img
       {...rest}
       src={imgSrc}
       width={width}
