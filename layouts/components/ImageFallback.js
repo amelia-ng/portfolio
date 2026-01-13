@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const ImageFallback = (props) => {
@@ -18,7 +19,7 @@ const ImageFallback = (props) => {
 
   // Use regular img tag for static export to avoid Next.js Image component issues
   return (
-    <img
+    <Image
       {...rest}
       src={imgSrc}
       width={width}

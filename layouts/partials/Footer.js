@@ -6,6 +6,8 @@ import ImageFallback from "@layouts/components/ImageFallback";
 import Logo from "@layouts/components/Logo";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
+import Image from "next/image";
+
 
 
 const Footer = () => {
