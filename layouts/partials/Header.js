@@ -25,7 +25,7 @@ const Header = () => {
     url === "/" ? router.asPath === "/" : router.asPath.startsWith(url);
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-darkmode-dark shadow mx-4 my-4 rounded-lg">
+    <header className="sticky top-0 z-50 bg-white dark:bg-darkmode-dark shadow mx-4 my-2 rounded-lg">
       <nav className="navbar container px-3 sm:px-8 flex items-center justify-between">
         {/* Logo */}
         <div className="order-0">

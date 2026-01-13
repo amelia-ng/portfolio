@@ -1,20 +1,24 @@
 
 const isProd = process.env.NODE_ENV === "production";
 
-const basePath = isProd ? "/geeky-nextjs" : "";
+const repoName = "/amelia_portfolio"; 
 
 const nextConfig = {
-  basePath,
-  assetPrefix: basePath,
+  reactStrictMode: true,
+  basePath: isProd ? repoName : "",
+  assetPrefix: isProd ? repoName : "",
+  trailingSlash: true,       // Ensures folders like /blog/ become /blog/index.html
   images: {
-    unoptimized: true,
+    unoptimized: true,       // Required for static sites on GitHub
   },
-  trailingSlash: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
   },
 };
 

@@ -43,7 +43,7 @@ const Post = ({ post }) => {
           </LinkWrapper>
         )}
 
-        {/* CLICKABLE FEATURED TAGS */}
+        {/* FEATURED TAGS (NOT CLICKABLE) */}
         {Array.isArray(post.frontmatter.categories) && (
           <ul className="absolute top-3 left-2 flex flex-wrap items-center z-10 item-center">
             {post.frontmatter.categories.map((tag, index) => (
@@ -51,12 +51,7 @@ const Post = ({ post }) => {
                 key={`tag-${index}`}
                 className="mx-2 inline-flex h-7 rounded-[35px] bg-primary px-3 text-white text-xs text-center items-center justify-center font-medium"
               >
-                <Link
-                  href={`/categories/${tag.replace(/\s+/g, "-").toLowerCase()}`}
-                  className="capitalize"
-                >
-                  {tag}
-                </Link>
+                {tag}
               </li>
             ))}
           </ul>

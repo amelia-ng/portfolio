@@ -26,13 +26,6 @@ const Sidebar = ({ posts, categories, className }) => {
     <aside className={`${className} px-0 lg:px-6 lg:col-4`}>
       {about.enable && (
         <div className="relative rounded border border-border p-6 text-center dark:border-darkmode-border">
-          <ImageFallback
-            className="-z-[1]"
-            src="/images/map.svg"
-            fill={true}
-            alt="bg-map"
-          />
-          <Logo />
           {markdownify(about.content, "p", "mt-8")}
           <Social
             className="socials sidebar-socials mt-6 justify-center"
@@ -88,24 +81,8 @@ const Sidebar = ({ posts, categories, className }) => {
       {/* featured widget */}
       {featured_posts.enable && (
         <div className="mt-6 rounded border border-border p-6 dark:border-darkmode-border">
-          <h4 className="section-title mb-12 text-center">Featured</h4>
-          <div className="mb-12 flex items-center justify-center">
-            <button
-              className={`btn px-5 py-2 ${
-                showRecent ? "btn-outline-primary" : "btn-primary"
-              }`}
-              onClick={() => setShowRecent(false)}
-            >
-              Featured
-            </button>
-            <button
-              className={`btn ml-3  px-5 py-2 ${
-                showRecent ? "btn-primary" : "btn-outline-primary"
-              }`}
-              onClick={() => setShowRecent(true)}
-            >
-              Recent
-            </button>
+          <h4 className="section-title mb-5 text-center">Other Projects</h4>
+          <div className="mb-5 flex items-center justify-center">
           </div>
           {showRecent
             ? sortPostByDate
@@ -163,14 +140,16 @@ const Sidebar = ({ posts, categories, className }) => {
                       />
                     )}
                     <div>
-                      <h3 className="h5 mb-2">
-                        <Link
-                          href={`/${blog_folder}/${post.slug}`}
-                          className="block hover:text-primary"
-                        >
-                          {post.frontmatter.title}
-                        </Link>
-                      </h3>
+                        <h4 className="h5 mb-2">
+                          <Link
+                            href={post.frontmatter.project_link || `/${blog_folder}/${post.slug}`}
+                            target={post.frontmatter.project_link ? "_blank" : "_self"}
+                            rel={post.frontmatter.project_link ? "noopener noreferrer" : undefined}
+                            className="block hover:text-primary"
+                          >
+                            {post.frontmatter.title}
+                          </Link>
+                        </h4>
                       <p className="inline-flex items-center font-secondary text-xs">
                         <FaRegCalendar className="mr-1.5" />
                         {dateFormat(post.frontmatter.date)}
@@ -181,35 +160,7 @@ const Sidebar = ({ posts, categories, className }) => {
         </div>
       )}
 
-      {/* newsletter */}
-      {newsletter.enable && (
-        <div className="mt-6  rounded border border-border p-6 text-center dark:border-darkmode-border">
-          <h4 className="section-title">{newsletter.title}</h4>
-          <p className="mt-10 text-xs">{newsletter.content}</p>
-          <MailchimpSubscribe
-            url={newsletter.malichip_url}
-            render={({ subscribe, status, message }) => (
-              <CustomForm
-                onValidated={(formData) => subscribe(formData)}
-                status={status}
-                message={message}
-              />
-            )}
-          />
-          <p className="text-xs">
-            By Singing Up, You Agree To
-            <Link
-              href={newsletter.privacy_policy_page}
-              onClick={(e) => {
-                e.preventDefault();
-              }}
-              className="ml-1 text-primary"
-            >
-              Privacy Policy
-            </Link>
-          </p>
-        </div>
-      )}
+    
     </aside>
   );
 };

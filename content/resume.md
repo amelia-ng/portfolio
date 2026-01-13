@@ -63,3 +63,4 @@ _________
 * **<a href="https://github.com/thuyanhnx/Recommendation-System-Online-Retail" target="_blank" rel="noopener noreferrer" className="inline text-base font-bold underline text-[#186956] ml-1 ">Recommendation Systems for Online Retail</a>**  (content-based, item-based and user-based collaborative filtering)
 * **<a href="https://github.com/thuyanhnx/Vehicle-Crash-Prediction" target="_blank" rel="noopener noreferrer" className="inline text-base font-bold underline text-[#186956] ml-1 ">Predict Vehicle Crash Frequency and Severity in New York City</a>**  (linear & logistics regression)
 * **<a href="https://public.tableau.com/app/profile/thuy.anh.nguyen8457/viz/HRDashboard_16383368889250/Overview?publish=yes" target="_blank" rel="noopener noreferrer" className="inline text-base font-bold underline text-[#186956] ml-1 ">HR dashboard</a>** (Tableau)
+

@@ -8,35 +8,30 @@ import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 
 
-
-
 const Footer = () => {
   const { copyright, footer_content } = config.params;
   return (
-    <footer className="section relative mt-12 pt-[70px] pb-[50px]">
+    <footer className="section relative mt-20 pt-[50px]">
       <ImageFallback
-        className="absolute bottom-0 left-0 z-[-1] w-full"
+        className="absolute bottom-0 top-10 left-0 z-[-1] w-full"
+        width={1905}
+        height={215}
         src="/images/footer-bg-shape.svg"
         alt="footer background"
-        width={1905}
-        height={295}
         priority
       />
       <div className="container text-center">
-        <div className="mb-6 inline-flex">
+        <div className="pt-[150px] inline-flex">
           <Logo />
         </div>
-        {markdownify(footer_content, "p", "max-w-[638px] mx-auto")}
+        {markdownify(footer_content, "p")}
 
         {/* footer menu */}
-        <ul className="mb-12 mt-6 flex-wrap space-x-2 lg:space-x-4">
+        <ul className="mt-10 mb-6 flex-wrap space-x-2 lg:space-x-4">
           {menu.footer.map((menu) => (
             <li className="inline-block" key={menu.name}>
               <Link
-                href={`${menu.url}/#!`}
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
+                href={`${menu.url}`}
                 className="p-2 font-bold text-dark hover:text-primary dark:text-darkmode-light lg:p-4"
               >
                 {menu.name}
@@ -46,7 +41,7 @@ const Footer = () => {
         </ul>
         {/* social icons */}
         <div className="inline-flex">
-          <Social source={social} className="socials mb-12 justify-center" />
+          <Social source={social} className="socials mb-1 justify-center" />
         </div>
         {/* copyright */}
         {markdownify(copyright, "p")}
