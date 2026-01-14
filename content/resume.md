@@ -26,23 +26,23 @@ _________
 **Data Analyst**
 #### *Nov 2023 - Jul 2025*
 - Served as the **sole data analyst**, managing the company’s end-to-end internal analytics infrastructure and presenting insights directly to C-level leadership and department heads.
-- Implemented and optimized scalable data pipelines using SQL, Python, GCP, and Tableau, streamlining reporting workflows and increasing data processing efficiency by 3x more data from 3+ databases without additional infrastructure.
+- Implemented and optimized scalable data pipelines using SQL, Python, GCP, and Tableau, streamlining reporting workflows and increasing data processing efficiency by 3 times more data from 3+ databases without additional infrastructure.
 - Designed and deployed statistical models (regression, clustering) and machine learning (time series, XGBoost) to support executive strategy; increased annual sales KPIs by 20%.
-- Analyzed data from 35000 monthly active user stores using ad-hoc and automated analytics to guide marketing and user management; increased average new sign-ups by 2x and 30% decrease in users’ issue tickets.
+- Analyzed data from 35,000 monthly active user stores with ad-hoc and automated analytics to guide marketing and user management strategies, resulting in an average of 50% increase in new sign-ups and 30% decrease in users’ issue tickets.
 
 
 ## VCCORP <a href="https://www.emis.com/php/company-profile/VN/Vccorp_Corporation__Cong_Ty_Co_Phan_Vccorp___Cong_Ty_Co_Phan_Vccorp__Vccorp_Corporation___en_9204447.html" target="_blank" rel="noopener noreferrer" className="inline text-sm font-normal italic underline text-[#186956] ml-1 ">(Tech company with largest digital ecosystem in Vietnam, Emis)</a>
 **Data Analyst - Team Lead**
 #### *Jun 2023 - Nov 2023*
-- Managed a team of 4 analysts to perform full-cycle A/B testing for recommendation engines deployment on 7 digital media websites resulting in 10–30% monthly gains in core web KPIs.
+- Managed a team of four to perform full-cycle A/B testing for recommendation engines deployment on 7 digital media websites resulting in 10–30% monthly gains in core web KPIs.
 - Designed and built automated A/B testing evaluation pipelines used in the company’s internal analytics platform, standardizing experiment analysis and reducing manual documentation by 5+ hours per week.
 - Architected a reusable and scalable A/B testing framework that was later adopted as the foundation for a client-facing analytics product by the consulting teams.
-- Maintained primary responsibility of advanced ad-hoc analytics for 3 digital publishing platforms, providing data-driven insights for editorial teams.
+- Maintained primary responsibility of advanced ad-hoc analysis for 3 digital publishing platforms, providing data-driven insights for editorial teams.
 
 **Data Analyst**
 #### *Mar 2022 - Jun 2023*
 - Designed and monitored 30+ KPIs of core products with automated dashboards and provided in-depth ad-hoc analysis for 5 digital publishing apps and websites.
-- Developed user segmentation methodology that helped increase mobile app notification system engagement to 30% within two months.
+- Developed user segmentation that helped increase app notification system engagement to 30% within 2 months.
 
 ## NOVAON GROUP
 **Data Analyst Intern**

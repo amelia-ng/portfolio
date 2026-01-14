@@ -60,38 +60,38 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                 components={{
                   h1: (props) => (
                     <h1
-                      className="md:text-2xl lg:text-3xl font-extrabold mt-6 mb-3 w-full text-left -ml-6 md:-ml-8 lg:-ml-12"
+                      className="md:text-xl lg:text-2xl font-extrabold mt-7 mb-1 w-full text-left -ml-6 md:-ml-8 lg:-ml-12"
                       style={{ color: "#186956ff" }} 
                       {...props}
                     />
                   ),
                   h2: (props) => (
                     <h2
-                      className="md:text-xl lg:text-xl font-extrabold mt-2 mb-1"
+                      className="md:text-lg font-extrabold mt-4 mb-0"
                       {...props}
                     />
                   ),
                   h3: (props) => (
                     <h3
-                      className="text-xl font-extrabold mt-1 mb-1"
+                      className="text-lg font-extrabold mt-0 mb-1 "
                       {...props}
                     />
                   ),
                   h4: (props) => (
                     <h4
-                      className="text-base font-italic mt-1 mb-0"
+                      className="text-base font-italic mt-0 mb-0 "
                       style={{ color:"#186956ff" }} 
                       {...props}
                     />
                   ),
                   p: (props) => (
-                    <p className="text-base md:text-base lg:text-md leading-relaxed mb-1 mr-4 lg:mr-12" {...props} />
+                    <p className="text-base md:text-base lg:text-base mb-0 mr-4 lg:mr-12" {...props} />
                   ),
                   ul: (props) => (
-                    <ul className="list-disc text-base md:text-base lg:text-md pl-6 mb-4 leading-relaxed mb-1 mr-4 lg:mr-12" {...props} />
+                    <ul className="list-disc text-base md:text-base lg:text-md pl-0 mt-0 mb-0 mr-4 lg:mr-20" {...props} />
                   ),
                   li: (props) => (
-                    <li className="mb-2 text-base md:text-base lg:text-md leading-relaxed leading-relaxed mb-1 mr-4 lg:mr-12" {...props} />
+                    <li className="text-base md:text-base lg:text-md mt-0 mb-0 mr-4 lg:mr-20" {...props} />
                   ),
                   strong: (props) => (
                     <strong className="font-bold text-black" {...props} />
