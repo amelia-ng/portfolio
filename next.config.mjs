@@ -2,12 +2,12 @@ const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
   output: "export",
-  basePath: isProd ? "/amelia_portfolio" : "",
+  basePath: isProd ? "/portfolio" : "",
   // Remove the trailing slash here
-  assetPrefix: isProd ? "/amelia_portfolio" : "", 
+  assetPrefix: isProd ? "/portfolio" : "", 
   images: { unoptimized: true },
   env: {
-    NEXT_PUBLIC_BASE_PATH: isProd ? "/amelia_portfolio" : "",
+    NEXT_PUBLIC_BASE_PATH: isProd ? "/portfolio" : "",
   },
 };
 

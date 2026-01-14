@@ -7,7 +7,7 @@ banner:
   button:
     enable: true
     label: My Github
-    link: "https://github.com/thuyanhnx"
+    link: "https://github.com/amelia-ng"
     target: "_blank"
     rel: "noopener noreferrer"
 

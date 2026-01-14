@@ -5,6 +5,6 @@ image: /images/post/vehicle-crash.png
 categories: ["Stats Models", "Python"]
 featured: true
 draft: false
-project_link: "https://github.com/thuyanhnx/Vehicle-Crash-Prediction"
+project_link: "https://github.com/amelia-ng/Vehicle-Crash-Prediction"
 ---
 Predict the the frequency and severity of vehicle crash using statistical models (linear regression and logistics regression). 
