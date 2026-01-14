@@ -8,7 +8,7 @@ banner:
   button:
     enable: true
     label: Quick Resume Download
-    link: "/files/test_resume_download.pdf"
+    link: "/files/amelia_nguyen_data_scientist_resume.pdf"
     target: "_blank"
     rel: "noopener noreferrer"
 

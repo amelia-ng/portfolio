@@ -5,6 +5,6 @@ image: /images/post/spotify-eda.png
 categories: ["EDA", "Python"]
 featured: false
 draft: false
-project_link: "https://github.com/thuyanhnx/Spotify-Analysis-Between-Now-and-Then"
+project_link: "https://github.com/amelia-ng/Spotify-Analysis-Between-Now-and-Then"
 ---
 My first data project when I started my career: retrieved data from Spotify Dev API and analyzed my music taste.

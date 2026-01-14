@@ -5,6 +5,6 @@ image: /images/post/retail-rec-sys.png
 categories: ["RecSys", "PySpark"]
 featured: true
 draft: false
-project_link: "https://github.com/thuyanhnx/Recommendation-System-Online-Retail"
+project_link: "https://github.com/amelia-ng/Recommendation-System-Online-Retail"
 ---
 Implemented content-based, user-based and item-based collaborative filtering recommendation systems using PySpark to retrieve product recommendations for customer in an online retail scenario.
