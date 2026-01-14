@@ -4,7 +4,7 @@ banner:
   title_small: "I'm Amelia Nguyen"
   content: I'm a **Data Scientist** with 3+ years of experience and an incoming **Master's in Data Science** from University of Michigan - Dearborn.
   image_enable: true
-  image: /images/banner-photo-final.png
+  image: images/banner-photo-final.png
   button:
     enable: true
     label: Quick Resume Download
@@ -32,7 +32,7 @@ main_section:
 
 promotion:
   enable: true
-  image: /images/technical_skills.jpg
+  image: "images/technical_skills.jpg"
   link: "#promotion"
 
   button:

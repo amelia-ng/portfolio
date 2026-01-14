@@ -1,7 +1,7 @@
 ---
 title: "Spotify Analysis: How Music Taste Changes Between Then & Now"
 date: 2021-08-21T00:00:00Z
-image: /images/blog_post/spotify-post.png
+image: images/blog_post/spotify-post.png
 categories: false
 featured: true
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Extract data from Google Datastore API with Python and Jupyter Notebook"
 date: 2024-09-26T00:00:00Z
-image: /images/blog_post/ggdatastore.png
+image: images/blog_post/ggdatastore.png
 categories: false
 featured: true
 draft: false

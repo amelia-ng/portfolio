@@ -42,7 +42,7 @@ const Portfolio = ({
       <section className="section banner relative pb-0 text-center">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
-          src={"/images/banner-bg-shape.svg"}
+          src="images/banner-bg-shape.svg"
           width={1905}
           height={295}
           alt="banner-shape"

@@ -6,9 +6,6 @@ import ImageFallback from "@layouts/components/ImageFallback";
 import Logo from "@layouts/components/Logo";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
-import Image from "next/image";
-
-
 
 const Footer = () => {
   const { copyright, footer_content } = config.params;
@@ -18,7 +15,7 @@ const Footer = () => {
         className="absolute bottom-0 top-10 left-0 z-[-1] w-full"
         width={1905}
         height={215}
-        src="/images/footer-bg-shape.svg"
+        src="images/footer-bg-shape.svg"
         alt="footer background"
         priority
       />

@@ -1,14 +1,15 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const ImageFallback = (props) => {
   const { src, fallback, width, height, alt, className, priority, ...rest } = props;
 
   // For static export with basePath, prepend the basePath to relative image paths
+  
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const processedSrc = src.startsWith("/") && !src.startsWith("//") && !src.startsWith("http")
-    ? `${basePath}${src}`
+  const cleanSrc = src.replace(/^\/+/, "");
+  const processedSrc = !src.startsWith("http") && !src.startsWith("//")
+    ? `${basePath}/${cleanSrc}`
     : src;
 
   const [imgSrc, setImgSrc] = useState(processedSrc);

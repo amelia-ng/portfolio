@@ -1,5 +1,7 @@
 import { sortByDate } from "@lib/utils/sortFunctions";
 import Link from "next/link";
+import Image from "next/image";
+
 
 const InnerPagination = ({ posts, date }) => {
   const orderedPosts = sortByDate(posts);

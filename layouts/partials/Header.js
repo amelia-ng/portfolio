@@ -6,8 +6,6 @@ import ThemeSwitcher from "@layouts/components/ThemeSwitcher";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-
 
 const Header = () => {
   const { main } = menu;

@@ -3,7 +3,7 @@ banner:
   title: Blog
   content: "All of my posts are featured in CodeX publication on Medium."
   image_enable: false
-  image: /images/blog_post/spotify-post.png
+  image: "images/blog_post/spotify-post.png"
   button:
     enable: true
     label: My Medium
@@ -13,7 +13,7 @@ banner:
 
 promotion:
   enable: false
-  image: /images/promotion.png
+  image: "/images/promotion.png"
   link: "#"
 
 recent_posts:

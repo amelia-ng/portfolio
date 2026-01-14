@@ -3,7 +3,7 @@ banner:
   title: Projects
   content: View all of my work on Github
   image_enable: false
-  image: /images/banner-author.png
+  image: "images/banner-author.png"
   button:
     enable: true
     label: My Github
@@ -13,7 +13,7 @@ banner:
 
 promotion:
   enable: false
-  image: /images/promotion.png
+  image: "images/promotion.png"
   link: "#"
 
 recent_posts:

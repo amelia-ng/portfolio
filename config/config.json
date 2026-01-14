@@ -2,9 +2,9 @@
   "site": {
     "title": "Amelia Nguyen",
     "base_url": "/",
-    "favicon": "/images/logo-icon.png",
-    "logo": "/images/logo.png",
-    "logo_white": "/images/logo.png",
+    "favicon": "images/logo-icon.png",
+    "logo": "images/logo.png",
+    "logo_white": "images/logo.png",
     "logo_width": "180",
     "logo_height": "39",
     "logo_text": "Amelia Nguyen"

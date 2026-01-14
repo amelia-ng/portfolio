@@ -1,7 +1,7 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
 import ImageFallback from "@layouts/components/ImageFallback";
-
+import Image from "next/image";
 import { getListPage, getSinglePage } from "@lib/contentParser";
 import { getTaxonomy } from "@lib/taxonomyParser";
 import { sortByDate } from "@lib/utils/sortFunctions";
@@ -35,7 +35,7 @@ const Home = ({ banner, posts, promotion, main_section, more_about_me }) => {
       <section className="section banner relative pb-0">
         <ImageFallback
           className="absolute bottom-0 left-0 z-[-1] w-full"
-          src="/images/banner-bg-shape.svg"
+          src="images/banner-bg-shape.svg"
           width={1905}
           height={295}
           alt="banner-shape"
