@@ -1,7 +1,7 @@
 ---
 banner:
   title: Blog
-  content: "All of my posts are featured in CodeX publication on Medium."
+  content: "All of my posts are featured in Medium publications, including Towards AI and CodeX"
   image_enable: false
   image: "images/blog_post/spotify-post.png"
   button:
