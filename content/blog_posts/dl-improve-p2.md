@@ -1,5 +1,5 @@
 ---
-title: "Improving Deep Neural Learning Networks (Part 1): Practical Approaches and Applications to LLMs"
+title: "Improving Deep Neural Learning Networks (Part 2): Optimization Algorithms"
 date: 2026-03-27T00:00:00Z
 image: images/blog_post/dl-improve-pt2.png
 categories: false
