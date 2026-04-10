@@ -39,9 +39,9 @@ export default RegularPages;
 export const getStaticPaths = async () => {
   const slugs = getSinglePage("content");
   
-  // FILTER: Exclude 'blog' and 'resume' to avoid conflicts with other pages
+  // FILTER: Exclude explicit routes to avoid conflicts with other pages
   const filteredSlugs = slugs.filter((item) => 
-    item.slug !== "blog" && item.slug !== "resume"
+    item.slug !== "blog" && item.slug !== "resume" && item.slug !== "experience"
   );
 
   const paths = filteredSlugs.map((item) => ({

@@ -62,7 +62,7 @@ const Header = () => {
                           <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                         </svg>
                       </span>
-                      <ul className="nav-dropdown-list hidden group-hover:block md:absolute md:top-[60px] md:block md:opacity-0 md:group-hover:opacity-100">
+                      <ul className="nav-dropdown-list hidden  group-hover:block md:absolute md:top-[60px] md:block md:opacity-0 md:group-hover:opacity-100">
                         {menuItem.children.map((child, idx) => (
                           <li className="nav-dropdown-item" key={`child-${idx}`}>
                             <Link
@@ -78,7 +78,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={menuItem.url}
-                      className={`nav-link block font-bold text-lg md:text-sm lg:text-sm ${
+                      className={`nav-link block font-bold text-l  ${
                         isActive(menuItem.url) ? "text-primary" : "text-dark"
                       }`}
                     >
@@ -90,7 +90,7 @@ const Header = () => {
             </ul>
 
             {/* Header social */}
-            <Social source={socical} className="socials text-xl ml-6" />
+            <Social source={socical} className="socials text-xl ml-8" />
           </div>
 
           {/* Theme switcher */}

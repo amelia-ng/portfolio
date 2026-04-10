@@ -78,7 +78,7 @@ const PostSingle = ({
                   <li>
                     <Link
                       className="inline-flex items-center font-secondary text-xs leading-3"
-                      href="/resume"
+                      href="/experience"
                     >
                       <FaUserAlt className="mr-1.5" />
                       {author}

@@ -10,23 +10,16 @@ import Link from "next/link";
 const Footer = () => {
   const { copyright, footer_content } = config.params;
   return (
-    <footer className="section relative mt-20 pt-[50px]">
-      <ImageFallback
-        className="absolute bottom-0 top-10 left-0 z-[-1] w-full"
-        width={1905}
-        height={215}
-        src="images/footer-bg-shape.svg"
-        alt="footer background"
-        priority
-      />
+    <footer className="section relative mt-0 pt-[5px]">
+      <div className="border-b border-border dark:border-darkmode-border "></div>
       <div className="container text-center">
-        <div className="pt-[150px] inline-flex">
+        <div className="pt-[50px] inline-flex">
           <Logo />
         </div>
         {markdownify(footer_content, "p")}
 
         {/* footer menu */}
-        <ul className="mt-10 mb-6 flex-wrap space-x-2 lg:space-x-4">
+        <ul className="mt-3 mb-6 flex-wrap space-x-2 lg:space-x-4">
           {menu.footer.map((menu) => (
             <li className="inline-block" key={menu.name}>
               <Link
@@ -40,7 +33,7 @@ const Footer = () => {
         </ul>
         {/* social icons */}
         <div className="inline-flex">
-          <Social source={social} className="socials mb-1 justify-center" />
+          <Social source={social} className="socials mt-2 justify-center [&_a]:text-4xl" />
         </div>
         {/* copyright */}
         {markdownify(copyright, "p")}

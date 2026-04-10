@@ -82,22 +82,22 @@
 .banner {
   &-title {
     h1 {
-      @apply font-bold leading-[1] lg:text-[72px];
+      @apply font-normal leading-[1] lg:text-[72px] text-white;
     }
 
     strong {
-      @apply text-primary;
+      @apply text-white font-normal;
     }
 
     span {
-      @apply font-normal font-bold text-dark dark:text-darkmode-light lg:text-[55px];
+      @apply font-normal text-white lg:text-[55px];
     }
   }
 }
 
 //section-title
 .section-title {
-  @apply mb-12 underline decoration-primary decoration-wavy decoration-2 underline-offset-[.5em];
+  @apply mb-12 
 }
 
 // ensure bold text inside main section paragraphs renders as bold
@@ -108,7 +108,7 @@
     strong {
       @apply font-extrabold;
       /* explicit numeric fallback for environments without the Tailwind utility */
-      font-weight: 800;
+      font-weight: 600;
     }
   }
 }

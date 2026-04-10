@@ -8,6 +8,9 @@ const Logo = ({ src }) => {
   // destructuring items from config object
   const { logo, logo_white, logo_width, logo_height, logo_text, title } =
     config.site;
+  const logoWidthValue = Number(String(logo_width).replace("px", ""));
+  const logoHeightValue = Number(String(logo_height).replace("px", ""));
+  const headerLogoScale = 1.12;
   const { theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
@@ -16,8 +19,8 @@ const Logo = ({ src }) => {
     <Link href="/" className="navbar-brand">
       {src || logo ? (
         <ImageFallback
-          width={logo_width.replace("px", "") * 2}
-          height={logo_height.replace("px", "") * 2}
+          width={logoWidthValue * 2}
+          height={logoHeightValue * 2}
           src={
             mounted && (theme === "dark" || resolvedTheme === "dark")
               ? logo_white
@@ -26,8 +29,8 @@ const Logo = ({ src }) => {
           alt={title}
           priority
           style={{
-            height: logo_height.replace("px", "") + "px",
-            width: logo_width.replace("px", "") + "px",
+            height: `${Math.round(logoHeightValue * headerLogoScale)}px`,
+            width: `${Math.round(logoWidthValue * headerLogoScale)}px`,
           }}
           className={"m-auto"}
         />

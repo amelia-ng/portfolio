@@ -5,42 +5,37 @@ import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import matter from "gray-matter";
 import Link from "next/link";
-import ImageFallback from "@layouts/components/ImageFallback";
 import themeConfig from "@config/theme.json";
+import { useState } from "react";
 
 const primaryColor = themeConfig.colors.default.theme_color.primary;
 
 export default function ResumePage({ frontmatter, mdxSource }) {
+  const [openSections, setOpenSections] = useState({});
+
+  const toggleSection = (key) => {
+    setOpenSections((prev) => ({ ...prev, [key]: !prev[key] }));
+  };
+
   return (
     <Base>
-      {/* Banner: title + button only */}
-      <section className="section banner relative pb-5 text-center">
-        {/* Background shape */}
-        <ImageFallback
-          className="absolute bottom-0 left-0 z-[-1] w-full"
-          src="images/banner-bg-shape.svg"
-          width={1905}
-          height={295}
-          alt="banner-shape"
-          priority
-        />
-        <div className="container text-center">
+      {/* Banner */}
+      <section className="section banner relative pb-6 bg-primary dark:bg-primary min-h-[10px] flex items-center">
+        <div className="container text-center" style={{ color: "#ffffff" }}>
           <div className="row">
-            <div className="mt-14 text-center lg:mt-0 lg:col-12 text-center">
-              {/* Title */}
+            <div className="mt-14 lg:col-12">
               {frontmatter.title && (
-                <h1 className="md:text-6xl lg:text-7xl font-extrabold mt-0 mb-6 text-center">
+                <h1 className="text-6xl mt-0 mb-6 " style={{ color: "#ffffff", fontWeight: 500 }}>
                   {frontmatter.title}
                 </h1>
               )}
-
-              {/* Button */}
               {frontmatter.button?.enable && (
                 <Link
                   href={frontmatter.button.link}
                   target={frontmatter.button.target || "_self"}
                   rel="noopener noreferrer"
-                  className="btn btn-primary mt-2 mb-6"
+                  className="btn mb-6"
+                  style={{ color: "#ffffff", borderColor: "#ffffffff" }}
                 >
                   {frontmatter.button.label}
                 </Link>
@@ -50,57 +45,295 @@ export default function ResumePage({ frontmatter, mdxSource }) {
         </div>
       </section>
 
-      {/* Markdown content below banner */}
-      <section className="section, mt-1">
+      {/* Resume Content */}
+      <section className="section mt-1">
         <div className="container">
           <div className="row">
-            <div className="lg:col-12 leading-relaxed mb-1 mr-9 lg:mr-27 ml-9 lg:ml-27">
+            <div className="lg:col-12" style={{ padding: "0 2rem" }}>
               <MDXRemote
                 {...mdxSource}
                 components={{
-                  h1: (props) => (
-                    <h1
-                      className="md:text-xl lg:text-2xl font-extrabold mt-7 mb-1 w-full text-left -ml-6 md:-ml-8 lg:-ml-12"
-                      style={{ color: "#186956ff" }} 
-                      {...props}
-                    />
+
+                  /* ── Collapsible section toggle ── */
+                  Section: ({ title, children }) => {
+                    const isOpen = openSections[title] ?? true;
+                    return (
+                      <div style={{ marginBottom: "1rem" }}>
+                        <h2
+                          onClick={() => toggleSection(title)}
+                          style={{
+                            color: primaryColor,
+                            fontSize: "1.7rem",
+                            fontWeight: 800,
+                            marginTop: "2rem",
+                            marginBottom: "1.75rem",
+                            cursor: "pointer",
+                            display: "flex",
+                            justifyContent: "space-between",
+                            alignItems: "center",
+                          }}
+                        >
+                          {title}
+                          <span style={{ fontSize: "2.1rem", lineHeight: 1 }}>
+                            {isOpen ? "−" : "+"}
+                          </span>
+                        </h2>
+                        {isOpen && children}
+                      </div>
+                    );
+                  },
+
+                  /* ── Timeline: vertical line on left, cards float right ── */
+                  Timeline: ({ children }) => (
+                    <div
+                      style={{
+                        position: "relative",
+                        paddingLeft: "2.5rem",
+                        paddingTop: "0.5rem",
+                        paddingBottom: "0.5rem",
+                      }}
+                    >
+                      {/* Vertical line */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          left: "0.6rem",
+                          top: 0,
+                          bottom: 0,
+                          width: "2px",
+                          backgroundColor: primaryColor,
+                          opacity: 0.35,
+                        }}
+                      />
+                      {children}
+                    </div>
                   ),
-                  h2: (props) => (
-                    <h2
-                      className="md:text-lg font-extrabold mt-4 mb-0"
-                      {...props}
-                    />
+
+                  Card: ({ children }) => (
+                    <div
+                      style={{
+                        borderRadius: "0.6rem",
+                        border: "1px solid #001a4fff",
+                        boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                        background: "#ffffff",
+                        padding: "1rem 1.2rem",
+                      }}
+                    >
+                      {children}
+                    </div>
                   ),
-                  h3: (props) => (
-                    <h3
-                      className="text-lg font-extrabold mt-0 mb-1 "
-                      {...props}
-                    />
+
+                  /* ── Entry: dot on line + card to the right ── */
+                  Entry: ({ date, title, position, children }) => (
+                    <div
+                      style={{
+                        position: "relative",
+                        marginBottom: "1.5rem",
+                        display: "flex",
+                        alignItems: "flex-start",
+                      }}
+                    >
+                      {/* Dot on the timeline */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          left: "-2.25rem",
+                          top: "1.25rem",
+                          width: "12px",
+                          height: "12px",
+                          borderRadius: "50%",
+                          backgroundColor: "#ffffff",
+                          border: `2.5px solid ${primaryColor}`,
+                          zIndex: 1,
+                        }}
+                      />
+
+                      {/* Floating card */}
+                      <div
+                        style={{
+                          flex: 1,
+                          borderRadius: "0.6rem",
+                          border: "1px solid #001a4fff",
+                          boxShadow: "0 2px 8px rgba(0,0,0,0.07)",
+                          overflow: "hidden",
+                          background: "#ffffff",
+                        }}
+                      >
+                        {/* Card header */}
+                        <div
+                          style={{
+                            padding: "0.9rem 1.2rem 0.7rem",
+                            borderBottom: "1px solid #e5e7eb",
+                            borderLeft: `4px solid ${primaryColor}`,
+                          }}
+                        >
+                          {date && (
+                            <p
+                              style={{
+                                color: primaryColor,
+                                fontSize: "0.8rem",
+                                fontWeight: 700,
+                                letterSpacing: "0.08em",
+                                letterHeight: 1.15,
+                                textTransform: "uppercase",
+                                margin: "0 0 0.25rem 0",
+                              }}
+                            >
+                              {date}
+                            </p>
+                          )}
+                          {title && (
+                            <h4
+                              style={{
+                                fontSize: "1rem",
+                                fontWeight: 800,
+                                margin: 0,
+                                heightSpacing: 1.15,
+                                color: "#111827",
+                              }}
+                            >
+                              {title}
+                            </h4>
+                          )}
+                          {position && (
+                            <h4
+                              style={{
+                                fontSize: "1rem",
+                                lineHeight: 1.75,
+                                fontWeight: 100,
+                                margin: 0,
+                                color: "#011849ff",
+                              }}
+                            >
+                              {position}
+                            </h4>
+                          )}
+                         
+                        </div>
+
+                        {children && (
+                          <div style={{ padding: "0.8rem 1.2rem 1rem" }}>
+                            {children}
+                          </div>
+                        )}
+                      </div>
+                    </div>
                   ),
-                  h4: (props) => (
-                    <h4
-                      className="text-base font-italic mt-0 mb-0 "
-                      style={{ color:"#186956ff" }} 
-                      {...props}
-                    />
+
+                  /* ── Base MDX element styles ── */
+                  ul: ({ children }) => (
+                    <ul
+                      style={{
+                        margin: "0.25rem 0 0",
+                        paddingLeft: "1.5rem",
+                        listStyleType: "disc",
+                        listStylePosition: "outside",
+                      }}
+                    >
+                      {children}
+                    </ul>
                   ),
-                  p: (props) => (
-                    <p className="text-base md:text-base lg:text-base mb-0 mr-4 lg:mr-12" {...props} />
+
+                  li: ({ children }) => (
+                    <li
+                      style={{
+                        display: "list-item",
+                        listStyle: "disc",
+                        listStyleType: "disc",
+                        fontSize: "0.95rem",
+                        lineHeight: 1.6,
+                        marginBottom: "0.25rem",
+                      }}
+                    >
+                      {children}
+                    </li>
                   ),
-                  ul: (props) => (
-                    <ul className="list-disc text-base md:text-base lg:text-md pl-0 mt-0 mb-0 mr-4 lg:mr-20" {...props} />
+
+                  p: ({ children }) => (
+                    <p style={{ fontSize: "0.95rem", lineHeight: 1.6, margin: "0 0 0.4rem" }}>
+                      {children}
+                    </p>
                   ),
-                  li: (props) => (
-                    <li className="text-base md:text-base lg:text-md mt-0 mb-0 mr-4 lg:mr-20" {...props} />
+
+                  h3: ({ children }) => (
+                    <h3 style={{ color: primaryColor, fontSize: "1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
+                      {children}
+                    </h3>
                   ),
-                  strong: (props) => (
-                    <strong className="font-bold text-black" {...props} />
+
+                  h4: ({ children }) => (
+                    <h4 style={{ fontSize: "0.95rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
+                      {children}
+                    </h4>
                   ),
                 }}
               />
             </div>
           </div>
+          <div className="row">
+            <div className="lg:col-12" style={{ padding: "0 2rem" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                  gap: "1rem",
+                  marginTop: "1rem",
+                  maxWidth: "36rem",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                <Link
+                  href="/projects"
+                  className="resume-nav-box btn"
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: primaryColor,
+                    color: "#ffffff",
+                    borderColor: primaryColor,
+                  }}
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/blog"
+                  className="resume-nav-box btn"
+                  style={{
+                    textAlign: "center",
+                    backgroundColor: primaryColor,
+                    color: "#ffffff",
+                    borderColor: primaryColor,
+                  }}
+                >
+                  Blog
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+        <style jsx>{`
+          .resume-nav-box {
+            transform: translateY(0);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+            transition:
+              transform 180ms ease,
+              box-shadow 180ms ease,
+              background-color 180ms ease;
+          }
+
+          .resume-nav-box:hover,
+          .resume-nav-box:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px rgba(15, 23, 42, 0.18);
+            background-color: #12306d !important;
+          }
+
+          @media (max-width: 767px) {
+            .resume-nav-box {
+              width: 100%;
+            }
+          }
+        `}</style>
       </section>
     </Base>
   );
@@ -109,12 +342,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
 export async function getStaticProps() {
   const filePath = path.join(process.cwd(), "content/resume.md");
   const fileContent = fs.readFileSync(filePath, "utf-8");
-
   const { data: frontmatter, content } = matter(fileContent);
-
   const mdxSource = await serialize(content);
-
-  return {
-    props: { frontmatter, mdxSource },
-  };
+  return { props: { frontmatter, mdxSource } };
 }

@@ -12,7 +12,7 @@
   "settings": {
     "theme_switcher": false,
     "default_theme": "light",
-    "pagination": 6,
+    "pagination": 20,
     "InnerPaginationOptions": {
       "enableTop": false,
       "enableBottom": true
