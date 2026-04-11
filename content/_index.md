@@ -57,17 +57,17 @@ experience:
     description: "Worked on statistical modeling and data preprocessing."
 
 projects:
-  - id: view-resume
+  - id: view-experience
     title: "Experiences"
     description: ""
-    link: "https://amelia-ng.github.io/portfolio/experience"
+    link: "/experience"
 
   - id: view-projects
     title: "Projects"
     description: ""
-    link: "https://amelia-ng.github.io/portfolio/projects"
+    link: "/projects"
 
   - id: data-blog
     title: "Data Science Blog"
     description: ""
-    link: "https://amelia-ng.github.io/portfolio/blog"
+    link: "/blog"
