@@ -3,7 +3,7 @@ title: "Experience"
 button:
   enable: true
   label: "Download Resume"
-  link:  "/files/amelia_nguyen_data_scientist_resume.pdf"
+  link:  "/files/Amelia_Nguyen_Data_Science.pdf"
   target: "_blank"
 ---
 

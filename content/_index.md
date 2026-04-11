@@ -60,14 +60,14 @@ projects:
   - id: view-resume
     title: "Experiences"
     description: ""
-    link: "/experience"
+    link: "https://amelia-ng.github.io/portfolio/experience"
 
   - id: view-projects
     title: "Projects"
     description: ""
-    link: "/projects"
+    link: "https://amelia-ng.github.io/portfolio/projects"
 
   - id: data-blog
     title: "Data Science Blog"
     description: ""
-    link: "/blog"
+    link: "https://amelia-ng.github.io/portfolio/blog"
