@@ -16,6 +16,7 @@ import {
 
 const { blog_folder, pagination } = config.settings;
 
+const isExternalUrl = (url = "") => /^https?:\/\//i.test(url);
 
 const Home = ({ banner, posts, main_section, skills_section,  experience, projects }) => {
   // Sort posts if needed
@@ -223,24 +224,35 @@ const Home = ({ banner, posts, main_section, skills_section,  experience, projec
             <div className="row">
               {projects.map((proj) => (
                 <div key={proj.id} className="md:col-3 lg:col-4 mb-3">
-
                   {proj.link ? (
-                    <a
-                      href={proj.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-nav-link block h-full"
-                    > 
-                      <div className="project-nav-card rounded bg-primary border border-border px-6 pt-6 pb-6 dark:border-darkmode-border text-center transition">
-                        <h3 className="text-xl font-semibold text-primary" style ={{ fontWeight: 600, color: "#ffffffff" }}>
-                          {proj.title}
-                        </h3>
-                        <p className="mt-3 text-sm leading-relaxed">
-                          {proj.description}
-                        </p>
-
-                      </div>
-                    </a>
+                    isExternalUrl(proj.link) ? (
+                      <a
+                        href={proj.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-nav-link block h-full"
+                      >
+                        <div className="project-nav-card rounded bg-primary border border-border px-6 pt-6 pb-6 dark:border-darkmode-border text-center transition">
+                          <h3 className="text-xl font-semibold text-primary" style ={{ fontWeight: 600, color: "#ffffffff" }}>
+                            {proj.title}
+                          </h3>
+                          <p className="mt-3 text-sm leading-relaxed">
+                            {proj.description}
+                          </p>
+                        </div>
+                      </a>
+                    ) : (
+                      <Link href={proj.link} className="project-nav-link block h-full">
+                        <div className="project-nav-card rounded bg-primary border border-border px-6 pt-6 pb-6 dark:border-darkmode-border text-center transition">
+                          <h3 className="text-xl font-semibold text-primary" style ={{ fontWeight: 600, color: "#ffffffff" }}>
+                            {proj.title}
+                          </h3>
+                          <p className="mt-3 text-sm leading-relaxed">
+                            {proj.description}
+                          </p>
+                        </div>
+                      </Link>
+                    )
                   ) : (
                     <div className="rounded border border-border px-6 pt-6 pb-6 dark:border-darkmode-border text-center">
 
