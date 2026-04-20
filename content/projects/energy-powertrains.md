@@ -1,5 +1,5 @@
 ---
-title: Fuel Consumption Rate Prediction across HEV, PHEV, and ICE Powertrains"
+title: Fuel Consumption Rate Prediction across HEV, PHEV, and ICE Powertrains
 date: 2026-04-01T00:00:00Z
 image: /images/post/powertrain-energy.png
 categories: ["Machine Learning", "Deep Learning"]
