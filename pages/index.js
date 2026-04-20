@@ -47,8 +47,8 @@ const Home = ({ banner, posts, main_section, skills_section,  experience, projec
             <div
               className={
                 banner.image_enable
-                  ? "mt-0 text-center lg:mt-0 lg:text-left lg:col-6"
-                  : "mt-0 text-center lg:mt-0 lg:text-left lg:col-12"
+                  ? "mt-0 text-center  justify-center lg:mt-0 lg:text-left lg:col-6"
+                  : "mt-0 text-center   justify-center lg:mt-0 lg:text-left lg:col-12"
               }
             >
               <div className="banner-title" style={{ color: "#ffffff" }}>
@@ -68,9 +68,9 @@ const Home = ({ banner, posts, main_section, skills_section,  experience, projec
               )}
             </div>
             {banner.image_enable && (
-              <div className="col-10 lg:col-5 ml-auto mb-8">
+              <div className="col-10 mb-8 mx-auto flex justify-center lg:col-5 lg:ml-auto lg:mr-0">
                 <ImageFallback
-                  className="mx-auto object-contain"
+                  className="mx-auto  justify-center object-contain"
                   src={banner.image}
                   width={400}
                   height={500}

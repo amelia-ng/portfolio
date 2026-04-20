@@ -34,14 +34,13 @@ skills_section:
   header: "Skills"
   subheader: ""
   paragraphs:
-    - "**Machine Learning:** Statistical Models (Regression, GLM), ML Algorithms (Decision Trees, Random Forest, Gradient Boosting, XGBoost/LightGBM, Clustering), Time-Series Forecasting, Causal Inference, A/B Testing."
-    - "**Analytics Competencies:** Data Modeling, Feature Engineering, Model Evaluation, ETL, Data Mining, Segmentation."
-    - "**Programming Language:** Python (Matplotlib, Seaborn, NumPy, Pandas, Scikit-learn, Statsmodels, TensorFlow, PyTorch, Keras), SQL, PySpark.*"
+    - "**Machine Learning & AI**: Regression, Classification, Tree-Based Models (Decision Trees, Random Forest, Gradient/XGBoost), Deep Learning (Neural Networks, CNNs, RNNs), Time Series Analysis, K-Means Clustering, Recommendation System."
+    - "**Languages & Frameworks**: Python (Pandas, Scikit-learn, NumPy, Matplotlib, Seaborn, Tensorflow, PyTorch), SQL, PySpark."
+    - "**Analytics**: Data Modeling, ETL, Data Mining, Segmentation, A/B Testing, Analytical Reporting."
     - "**Big Data Platforms:** Apache Spark, PySpark, Hadoop, Google Cloud Platform (Big Query, Vertex AI, Google Datastore)"
     - "**Collaboration Tools:** Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office."
     - "**Data Visualization and BI Tools:** Tableau, Power BI, Looker, SAP, SAP Cloud, Excel."
-    - "*Currently Learning:* Deep Learning (CNN, RNN), Natural Language Processing, AI Agents (LLMs, Agentic AI)*"
-
+    
 experience:
   - title: "Data Analyst"
     company: "Gearlauch"

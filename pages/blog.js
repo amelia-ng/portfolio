@@ -39,10 +39,8 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
 
     return (
       <article
+        className="flex flex-col gap-6 lg:flex-row"
         style={{
-          display: "flex",
-          flexDirection: "row",
-          gap: "1.5rem",
           width: "100%",
           padding: "1.25rem",
           border: "1px solid #dbe4f0",
@@ -53,19 +51,17 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
         }}
       >
         {post.frontmatter.image && (
-          <Link href={href} className="shrink-0">
+          <Link href={href} className="w-full shrink-0 lg:w-auto">
             <div
+              className="w-full lg:max-w-[320px]"
               style={{
-                width: "320px",
-                maxWidth: "100%",
-                height: "100%",
-                minHeight: "200px",
+                aspectRatio: "16 / 10",
                 overflow: "hidden",
                 borderRadius: "0.7rem",
               }}
             >
               <ImageFallback
-                className="h-full w-full object-cover transition hover:scale-[1.02]"
+                className="h-full w-full object-cover transition-opacity duration-200 hover:opacity-90"
                 src={post.frontmatter.image}
                 alt={post.frontmatter.title}
                 width={640}
@@ -197,13 +193,6 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
           </div>
         </div>
       </section>
-      <style jsx>{`
-        @media (max-width: 767px) {
-          article {
-            flex-direction: column !important;
-          }
-        }
-      `}</style>
     </Base>
   );
 };

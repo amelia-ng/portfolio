@@ -11,8 +11,8 @@ button:
 <Timeline>
   <Entry title="Master's in Data Science" date="2025 - 2027" position="University of Michigan - Dearborn">
     <ul>
-      <li>• Concentration: Computational Intelligence</li>
-      <li>• GPA = 4.0</li>
+      <li>• Concentration: Computational Intelligence, GPA: 4.0</li>
+      <li>• Relevant Coursework: Machine Learning and Computational Statistics, Regression Analysis, Database Systems, Big Data, Operations Research, Data Analytics & Modeling, Deep Learning, Natural Language Processing, Intelligent Systems.</li>
     </ul>
   </Entry>
 </Timeline>
@@ -24,9 +24,9 @@ button:
   <Entry title="Data Analyst" date="2023 - 2025" position="Gearlaunch">
     <ul>
       <li>• Served as the **sole data analyst**, managing the company’s end-to-end internal analytics infrastructure and presenting business analysis insights directly to C-level leadership and department heads.</li>
-      <li>• Implemented and optimized scalable data pipelines using **SQL, Python, GCP**, and **Tableau**, streamlining reporting workflows and increasing data processing efficiency by **3 times** more data from 3+ databases without additional infrastructure.</li>
-      <li>• Designed and deployed **statistical models** (regression, clustering) and **machine learning** (time series, XGBoost, Random Forest) to support e-commerce executive strategy; increased annual sales KPIs **by 20%**.</li>
-      <li>• Analyzed data from **35,000** monthly active user stores with ad-hoc and automated analytics to guide marketing analytics and user management strategies, resulting in an average **50% increase** in new sign-ups and **30% decrease** in users’ issue requests.</li>
+      <li>• Implemented and optimized scalable data pipelines using **SQL, Python, GCP**, and **Tableau**, streamlining reporting workflows and increasing data processing efficiency by **3 times** more data without additional infrastructure.</li>
+      <li>• Designed and deployed **Machine Learning** (Regression, Random Forest, XGBoost) and **Time Series Analysis** (AR, ARIMA, SARIMAX) to support e-commerce executive strategy; supporting annual sales KPIs increase by 20%.</li>
+      <li>• Analyzed data from 35,000 monthly active user stores with **ad-hoc and automated analytics** resulting in an average of 50% increase in marketing conversions and 30% decrease in customer’ tickets issues.</li>
     </ul>
   </Entry>
 
@@ -72,13 +72,12 @@ button:
 
 <Section title="Skills">
 <Card>
-- "**Machine Learning:** Statistical Models (Regression, GLM), ML Algorithms (Decision Trees, Random Forest, Gradient Boosting, XGBoost/LightGBM, Clustering), Time-Series Forecasting, Causal Inference, A/B Testing."
-- "**Analytics Competencies:** Data Modeling, Feature Engineering, Model Evaluation, ETL, Data Mining, Segmentation."
-- "**Programming Language:** Python (Matplotlib, Seaborn, NumPy, Pandas, Scikit-learn, Statsmodels, TensorFlow, PyTorch, Keras), SQL, PySpark.*"
-- "**Big Data Platforms:** Apache Spark, PySpark, Hadoop, Google Cloud Platform (Big Query, Vertex AI, Google Datastore)"
-- "**Collaboration Tools:** Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office."
-- "**Data Visualization and BI Tools:** Tableau, Power BI, Looker, SAP, SAP Cloud, Excel."
-- "*Currently Learning:* Deep Learning (CNN, RNN), Natural Language Processing, AI Agents (LLMs, Agentic AI)*"
+- **Machine Learning & AI**: Regression, Classification, Tree-Based Models (Decision Trees, Random Forest, Gradient/XGBoost), Deep Learning (Neural Networks, CNNs, RNNs), Time Series Analysis, K-Means Clustering, Recommendation System.
+- **Languages & Frameworks**: Python (Pandas, Scikit-learn, NumPy, Matplotlib, Seaborn, Tensorflow, PyTorch), SQL, PySpark.
+- **Analytics**: Data Modeling, ETL, Data Mining, Segmentation, A/B Testing, Analytical Reporting.
+- **Big Data Platforms:** Apache Spark, PySpark, Hadoop, Google Cloud Platform (Big Query, Vertex AI, Google Datastore)
+- **Collaboration Tools:** Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office.
+- **Data Visualization and BI Tools:** Tableau, Power BI, Looker, SAP, SAP Cloud, Excel.
 </Card>
 
 </Section>
