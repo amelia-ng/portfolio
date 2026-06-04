@@ -1,7 +1,7 @@
 ---
 title: Fuel Consumption Prediction for ICE powertrain vehicles
 date: 2026-05-30T00:00:00Z
-image: /images/post/powertrain-energy.png
+image: /images/post/icev_fuel_rate.png
 categories: ["Machine Learning", "Deep Learning"]
 featured: true
 draft: false
