@@ -27,7 +27,7 @@ const Home = ({ banner, posts, main_section, skills_section,  experience, projec
     mail: "anhthng@umich.edu",
     location: "Detroit, MI",
     linkedin: "https://www.linkedin.com/in/ameliang12/",
-    github: "https://github.com/thuyanhnx",
+    github: "https://github.com/amelia-ng",
   };
 
   return (
