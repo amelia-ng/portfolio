@@ -36,6 +36,16 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
 
     const author = post.frontmatter.author || meta_author;
     const href = `/${blog_folder}/${post.slug}`;
+    const titleHref = post.frontmatter.project_link || href;
+    const isExternalTitle = Boolean(post.frontmatter.project_link);
+    const TitleLink = ({ children }) =>
+      isExternalTitle ? (
+        <a href={titleHref} target="_blank" rel="noopener noreferrer">
+          {children}
+        </a>
+      ) : (
+        <Link href={titleHref}>{children}</Link>
+      );
 
     return (
       <article
@@ -81,11 +91,11 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
           }}
         >
           <h3 style={{ fontSize: "1.5rem", fontWeight: 300, margin: "0 0 0.6rem", lineHeight: 1.2 }}>
-            <Link href={href}>
+            <TitleLink>
               <span className="cursor-pointer transition hover:text-primary">
                 {post.frontmatter.title}
               </span>
-            </Link>
+            </TitleLink>
           </h3>
 
           <div

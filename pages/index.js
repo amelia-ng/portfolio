@@ -71,7 +71,7 @@ const Home = ({ banner, posts, main_section, skills_section,  experience, projec
               <div className="col-10 mb-8 mx-auto flex justify-center lg:col-5 lg:ml-auto lg:mr-0">
                 <ImageFallback
                   className="mx-auto  justify-center object-contain"
-                  src={banner.image}
+                  src="/images/banner-photo-final.png"
                   width={400}
                   height={500}
                   priority

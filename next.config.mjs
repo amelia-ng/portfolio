@@ -3,7 +3,6 @@ const repoName = process.env.GITHUB_REPOSITORY?.split("/")[1] || "portfolio";
 const basePath = isProd ? `/${repoName}` : "";
 
 const nextConfig = {
-  output: "export",
   basePath,
   assetPrefix: basePath,
   images: { unoptimized: true },
