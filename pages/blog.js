@@ -10,7 +10,7 @@ import dateFormat from "@lib/utils/dateFormat";
 const { blog_folder, pagination, summary_length } = config.settings;
 const { meta_author } = config.metadata;
 
-const Blog = ({ banner, posts, recent_posts, promotion }) => {
+const Blog = ({ posts, recent_posts, promotion }) => {
   const sortPostByDate = sortByDate(posts);
   const showPosts = pagination;
 
@@ -49,7 +49,7 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
 
     return (
       <article
-        className="flex flex-col gap-6 lg:flex-row"
+        className="content-card flex flex-col gap-6 lg:flex-row"
         style={{
           width: "100%",
           padding: "1.25rem",
@@ -104,7 +104,7 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
               flexWrap: "wrap",
               gap: "1rem",
               marginBottom: "0.9rem",
-              color: "#475569",
+              color: "#003f96ff",
               fontSize: "0.85rem",
               fontWeight: 600,
             }}
@@ -124,48 +124,23 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
   };
 
   return (
-    <Base>
-      <section className="section banner relative pb-6 bg-primary dark:bg-primary min-h-[10px] flex items-center">
-        <div className="container text-center" style={{ color: "#ffffff" }}>
-          <div className="row">
-            <div className="mt-14 lg:col-12">
-              {banner.title && (
-                <h1 className="text-6xl mt-0 mb-4" style={{ color: "#ffffff", fontWeight: 500 }}>
-                  {banner.title}
-                </h1>
-              )}
-              {banner.content && (
-                <p
-                  style={{
-                    color: "#ffffff",
-                    fontSize: "1.05rem",
-                    margin: "0 auto 1.5rem",
-                    maxWidth: "42rem",
-                  }}
-                >
-                  {banner.content}
-                </p>
-              )}
-              {banner.button?.enable && (
-                <Link
-                  href={banner.button.link}
-                  target={banner.button.target || "_self"}
-                  rel={banner.button.rel || "noopener noreferrer"}
-                  className="btn mb-6"
-                  style={{ color: "#ffffff", borderColor: "#ffffff" }}
-                >
-                  {banner.button.label}
-                </Link>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <Base title="Blog">
       <section className="section">
         <div className="container">
+          <div className="page-intro">
+            <h1>Blog</h1>
+            <Link
+              href="https://medium.com/@ameliablog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-lg border-2 border-[#191970] px-7 py-2 transition hover:border-blue-700"
+            >
+              View my Medium
+            </Link>
+          </div>
           <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-12">
+            <div className="mb-12 lg:mb-0 lg:col-12 "
+>
               {promotion.enable && (
                 <Link href={promotion.link} className="section block pt-0">
                   <ImageFallback
@@ -180,7 +155,7 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
 
               {recent_posts.enable && (
                 <div className="section pt-0">
-                  <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
+                  <div className="rounded border border-border px-6 pt-6">
                     <div className="row">
                       {sortPostByDate.slice(0, visibleCount).map((post) => (
                         <div className="mb-8 col-12" key={post.slug}>
@@ -203,6 +178,58 @@ const Blog = ({ banner, posts, recent_posts, promotion }) => {
           </div>
         </div>
       </section>
+      <style jsx>{`
+        .page-intro {
+          align-items: center;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+          text-align: center;
+        }
+
+        .page-intro h1 {
+          font-size: 2.4rem;
+          font-weight: 400;
+          line-height: 1.2;
+          margin: 0;
+        }
+
+        .page-action-box {
+          background-color: #ffffff;
+          border: 1.5px solid #0000ee;
+          border-radius: 0.35rem;
+          color: #0000ee;
+          display: inline-flex;
+          justify-content: center;
+          padding: 0.45rem 0.85rem;
+          text-decoration: underline;
+          transition:
+            background-color 180ms ease,
+            border-color 180ms ease,
+            color 180ms ease;
+        }
+
+        .page-action-box:hover,
+        .page-action-box:focus-visible {
+          background-color: #0000ee;
+          border-color: #0000ee;
+          color: #ffffff;
+        }
+
+        :global(.content-card) {
+          transition:
+            border-color 180ms ease,
+            box-shadow 180ms ease,
+            transform 180ms ease;
+        }
+
+        :global(.content-card:hover) {
+          border-color: #1d4ed8 !important;
+          box-shadow: 0 16px 36px rgba(29, 78, 216, 0.22) !important;
+          transform: translateY(-2px);
+        }
+      `}</style>
     </Base>
   );
 };
@@ -212,12 +239,11 @@ export default Blog;
 export const getStaticProps = async () => {
   const page = await getRegularPage("blog");
   const { frontmatter } = page;
-  const { banner, recent_posts, promotion } = frontmatter;
+  const { recent_posts, promotion } = frontmatter;
   const posts = getSinglePage(`content/blog_posts`);
 
   return {
     props: {
-      banner,
       posts,
       recent_posts,
       promotion,

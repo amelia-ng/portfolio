@@ -1,5 +1,5 @@
 ---
-title: "Experience"
+title: "Resume"
 button:
   enable: true
   label: "Download Resume"

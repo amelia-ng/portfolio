@@ -16,10 +16,17 @@ const App = ({ Component, pageProps }) => {
   const sf = theme.fonts.font_family.secondary;
   const [fontcss, setFontcss] = useState();
   useEffect(() => {
+    const googleFonts = [pf, sf].filter((font) => font?.includes(":"));
+
+    if (!googleFonts.length) {
+      setFontcss("");
+      return;
+    }
+
     fetch(
-      `https://fonts.googleapis.com/css2?family=${pf}${
-        sf ? "&family=" + sf : ""
-      }&display=swap`
+      `https://fonts.googleapis.com/css2?family=${googleFonts.join(
+        "&family="
+      )}&display=swap`
     ).then((res) => res.text().then((css) => setFontcss(css)));
   }, [pf, sf]);
 

@@ -31,10 +31,10 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Open Sans:wght@400",
-      "primary_type": "sans-serif",
-      "secondary": "Open Sans:wght@400;700",
-      "secondary_type": "sans-serif"
+      "primary": "Georgia",
+      "primary_type": "serif",
+      "secondary": "Georgia",
+      "secondary_type": "serif"
     },
     "font_size": {
       "base": "15",

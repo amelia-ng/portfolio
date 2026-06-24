@@ -53,7 +53,7 @@ const Header = () => {
                   {menuItem.hasChildren ? (
                     <div className="nav-dropdown group relative">
                       <span
-                        className={`nav-link font-bold inline-flex items-center ${
+                        className={`nav-link inline-flex items-center ${
                           menuItem.children.some((c) => isActive(c.url)) ? "text-primary" : "text-dark"
                         }`}
                       >
@@ -67,7 +67,9 @@ const Header = () => {
                           <li className="nav-dropdown-item" key={`child-${idx}`}>
                             <Link
                               href={child.url}
-                              className={`font-bold ${isActive(child.url) ? "text-primary" : "text-dark"}`}
+                              className={`nav-dropdown-link block ${
+                                isActive(child.url) ? "text-primary" : "text-dark"
+                              }`}
                             >
                               {child.name}
                             </Link>
@@ -78,7 +80,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={menuItem.url}
-                      className={`nav-link block font-bold text-l  ${
+                      className={`nav-link block text-l  ${
                         isActive(menuItem.url) ? "text-primary" : "text-dark"
                       }`}
                     >

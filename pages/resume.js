@@ -18,36 +18,23 @@ export default function ResumePage({ frontmatter, mdxSource }) {
   };
 
   return (
-    <Base>
-      {/* Banner */}
-      <section className="section banner relative pb-6 bg-primary dark:bg-primary min-h-[10px] flex items-center">
-        <div className="container text-center" style={{ color: "#ffffff" }}>
-          <div className="row">
-            <div className="mt-14 lg:col-12">
-              {frontmatter.title && (
-                <h1 className="text-6xl mt-0 mb-6 " style={{ color: "#ffffff", fontWeight: 500 }}>
-                  {frontmatter.title}
-                </h1>
-              )}
-              {frontmatter.button?.enable && (
-                <Link
-                  href={frontmatter.button.link}
-                  target={frontmatter.button.target || "_self"}
-                  rel="noopener noreferrer"
-                  className="btn mb-6"
-                  style={{ color: "#ffffff", borderColor: "#ffffffff" }}
-                >
-                  {frontmatter.button.label}
-                </Link>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
+    <Base title={frontmatter.title}>
       {/* Resume Content */}
       <section className="section mt-1">
         <div className="container">
+          <div className="page-intro">
+            <h1>{frontmatter.title}</h1>
+            {frontmatter.button?.enable && (
+              <Link
+                href={frontmatter.button.link}
+                target={frontmatter.button.target || "_self"}
+                rel="noopener noreferrer"
+                className="page-action-box inline-flex items-center rounded-lg border-2 border-[#191970] px-7 py-2 transition hover:border-blue-700"
+              >
+                {frontmatter.button.label}
+              </Link>
+            )}
+          </div>
           <div className="row">
             <div className="lg:col-12" style={{ padding: "0 2rem" }}>
               <MDXRemote
@@ -312,6 +299,44 @@ export default function ResumePage({ frontmatter, mdxSource }) {
           </div>
         </div>
         <style jsx>{`
+          .page-intro {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            text-align: center;
+          }
+
+          .page-intro h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin: 0;
+          }
+
+          .page-action-box {
+            background-color: #ffffff;
+            border: 1.5px solid #0000ee;
+            border-radius: 0.35rem;
+            color: #0000ee;
+            display: inline-flex;
+            justify-content: center;
+            padding: 0.45rem 0.85rem;
+            text-decoration: underline;
+            transition:
+              background-color 180ms ease,
+              border-color 180ms ease,
+              color 180ms ease;
+          }
+
+          .page-action-box:hover,
+          .page-action-box:focus-visible {
+            background-color: #0000ee;
+            border-color: #0000ee;
+            color: #ffffff;
+          }
+
           .resume-nav-box {
             transform: translateY(0);
             box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
