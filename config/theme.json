@@ -31,13 +31,13 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Georgia",
+      "primary": "Lora",
       "primary_type": "serif",
       "secondary": "Georgia",
       "secondary_type": "serif"
     },
     "font_size": {
-      "base": "15",
+      "base": "16px",
       "scale": "1.15"
     }
   }

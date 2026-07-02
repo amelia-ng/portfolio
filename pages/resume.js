@@ -50,10 +50,10 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                           onClick={() => toggleSection(title)}
                           style={{
                             color: primaryColor,
-                            fontSize: "1.7rem",
-                            fontWeight: 800,
+                            fontSize: "1.5rem",
+                            fontWeight: 400,
                             marginTop: "2rem",
-                            marginBottom: "1.75rem",
+                            marginBottom: "1.57rem",
                             cursor: "pointer",
                             display: "flex",
                             justifyContent: "space-between",
@@ -61,7 +61,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                           }}
                         >
                           {title}
-                          <span style={{ fontSize: "2.1rem", lineHeight: 1 }}>
+                          <span style={{ fontSize: "2.1rem", lineHeight: 0.7 }}>
                             {isOpen ? "−" : "+"}
                           </span>
                         </h2>
@@ -76,7 +76,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                       style={{
                         position: "relative",
                         paddingLeft: "2.5rem",
-                        paddingTop: "0.5rem",
+                        paddingTop: "0rem",
                         paddingBottom: "0.5rem",
                       }}
                     >
@@ -87,7 +87,8 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                           left: "0.6rem",
                           top: 0,
                           bottom: 0,
-                          width: "2px",
+                          width: "3px",
+
                           backgroundColor: primaryColor,
                           opacity: 0.35,
                         }}
@@ -125,7 +126,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                         style={{
                           position: "absolute",
                           left: "-2.25rem",
-                          top: "1.25rem",
+                          top: "0.5rem",
                           width: "12px",
                           height: "12px",
                           borderRadius: "50%",
@@ -158,9 +159,8 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                             <p
                               style={{
                                 color: primaryColor,
-                                fontSize: "0.8rem",
-                                fontWeight: 700,
-                                letterSpacing: "0.08em",
+                                fontSize: "1rem",
+                                fontWeight: 600,
                                 letterHeight: 1.15,
                                 textTransform: "uppercase",
                                 margin: "0 0 0.25rem 0",
@@ -172,8 +172,8 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                           {title && (
                             <h4
                               style={{
-                                fontSize: "1rem",
-                                fontWeight: 800,
+                                fontSize: "1.2rem",
+                                fontWeight: 500,
                                 margin: 0,
                                 heightSpacing: 1.15,
                                 color: "#111827",
@@ -185,11 +185,11 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                           {position && (
                             <h4
                               style={{
-                                fontSize: "1rem",
+                                fontSize: "1.1rem",
                                 lineHeight: 1.75,
                                 fontWeight: 100,
                                 margin: 0,
-                                color: "#011849ff",
+                                color: "#0e3fc7ff",
                               }}
                             >
                               {position}
@@ -211,7 +211,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                   ul: ({ children }) => (
                     <ul
                       style={{
-                        margin: "0.25rem 0 0",
+                        margin: "1.1rem 0 0",
                         paddingLeft: "1.5rem",
                         listStyleType: "disc",
                         listStylePosition: "outside",
@@ -227,7 +227,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                         display: "list-item",
                         listStyle: "disc",
                         listStyleType: "disc",
-                        fontSize: "0.95rem",
+                        fontSize: "1.2rem",
                         lineHeight: 1.6,
                         marginBottom: "0.25rem",
                       }}
@@ -237,19 +237,19 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                   ),
 
                   p: ({ children }) => (
-                    <p style={{ fontSize: "0.95rem", lineHeight: 1.6, margin: "0 0 0.4rem" }}>
+                    <p style={{ fontSize: "1.2rem", lineHeight: 1.6, margin: "0 0 0.4rem" }}>
                       {children}
                     </p>
                   ),
 
                   h3: ({ children }) => (
-                    <h3 style={{ color: primaryColor, fontSize: "1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
+                    <h3 style={{ color: primaryColor, fontSize: "1.1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
                       {children}
                     </h3>
                   ),
 
                   h4: ({ children }) => (
-                    <h4 style={{ fontSize: "0.95rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
+                    <h4 style={{ fontSize: "1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
                       {children}
                     </h4>
                   ),
@@ -263,7 +263,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                 style={{
                   display: "grid",
                   gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
-                  gap: "1rem",
+                  gap: "1em",
                   marginTop: "1rem",
                   maxWidth: "36rem",
                   marginLeft: "auto",

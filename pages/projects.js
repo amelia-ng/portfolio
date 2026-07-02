@@ -113,13 +113,12 @@ const Portfolio = ({ posts, recent_posts, promotion }) => {
               flexWrap: "wrap",
               gap: "1rem",
               marginBottom: "0.9rem",
-              color: "#475569",
-              fontSize: "0.85rem",
-              fontWeight: 600,
+              color:"#0043fbff",
+              fontSize: "1rem",
+              fontWeight: 500,
             }}
           >
-            <span>{author}</span>
-            <span>{dateFormat(post.frontmatter.date)}</span>
+          <span>{dateFormat(post.frontmatter.date)}</span>
           </div>
 
           {description && (
@@ -133,19 +132,19 @@ const Portfolio = ({ posts, recent_posts, promotion }) => {
               <h4
                 style={{
                   margin: "0 0 0.45rem",
-                  fontSize: "0.95rem",
-                  fontWeight: 600,
-                  color: "#0f172a",
+                  fontSize: "1rem",
+                  fontWeight: 400,
+                  color: "#002c93ff",
                 }}
               >
-                Key achievements
+                Key Achievements:
               </h4>
               <ul
                 style={{
                   margin: 0,
                   paddingLeft: "1.25rem",
                   color: "#334155",
-                  fontSize: "0.95rem",
+                  fontSize: "1rem",
                   lineHeight: 1.65,
                   listStyleType: "disc",
                 }}
@@ -236,7 +235,6 @@ const Portfolio = ({ posts, recent_posts, promotion }) => {
           line-height: 1.2;
           margin: 0;
         }
-
         .page-action-box {
           background-color: #ffffff;
           border: 1.5px solid #0000ee;

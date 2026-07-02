@@ -70,13 +70,7 @@ const Blog = ({ posts, recent_posts, promotion }) => {
                 borderRadius: "0.7rem",
               }}
             >
-              <ImageFallback
-                className="h-full w-full object-cover transition-opacity duration-200 hover:opacity-90"
-                src={post.frontmatter.image}
-                alt={post.frontmatter.title}
-                width={640}
-                height={420}
-              />
+              
             </div>
           </Link>
         )}
@@ -104,12 +98,11 @@ const Blog = ({ posts, recent_posts, promotion }) => {
               flexWrap: "wrap",
               gap: "1rem",
               marginBottom: "0.9rem",
-              color: "#003f96ff",
-              fontSize: "0.85rem",
-              fontWeight: 600,
+              color: "#0043fbff",
+              fontSize: "1rem",
+              fontWeight: 500,
             }}
           >
-            <span>{author}</span>
             <span>{dateFormat(post.frontmatter.date)}</span>
           </div>
 

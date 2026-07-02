@@ -13,8 +13,8 @@ import {
 
 const Home = ({ main_section, skills_section }) => {
   const contactInfo = {
-    university: "University of Michigan - Dearborn",
-    mail: "anhthng@umich.edu",
+    university: "MS Data Science at University of Michigan-Dearborn",
+    mail: "amelianguyen.ds@gmail.com",
     location: "Detroit, MI",
     linkedin: "https://www.linkedin.com/in/ameliang12/",
     linkedinLabel: "in/ameliang12",
@@ -155,37 +155,16 @@ const Home = ({ main_section, skills_section }) => {
           line-height: 1.5;
           word-break: break-word;
         }
-
-        .profile-detail :global(svg) {
+        
+  .profile-detail span {
+  color: #222;
+  font-weight: 400;
+}
+  .profile-detail :global(svg) {
           flex: 0 0 auto;
           margin-top: 0.2rem;
         }
 
-        .profile-detail span,
-        .profile-detail :global(a) {
-          color: #222;
-          font-weight: 400;
-        }
-
-        .profile-detail :global(a:hover) {
-          color: #191970;
-          text-decoration: underline;
-        }
-
-        :global(.dark) .profile-detail span,
-        :global(.dark) .profile-detail :global(a) {
-          color: #ffff;
-        }
-
-        .home-intro :global(h1),
-        .home-intro :global(h2),
-        .home-intro :global(h3),
-        .home-intro :global(h4),
-        .home-intro :global(h5),
-        .home-intro :global(h6),
-        .home-intro :global(strong) {
-          font-weight: 400;
-        }
 
         @media (max-width: 991px) {
           .profile-sidebar {
@@ -202,6 +181,38 @@ const Home = ({ main_section, skills_section }) => {
             width: clamp(90px, 42vw, 145px);
           }
         }
+.home-intro :global(h1),
+.home-intro :global(h2),
+.home-intro :global(h3),
+.home-intro :global(h4),
+.home-intro :global(h5),
+.home-intro :global(h6),
+.home-intro :global(p),
+.home-intro :global(span),
+.home-intro :global(a),
+.home-intro :global(li) {
+    font-weight: 400 !important;
+  }
+  
+    .home-intro :global(*) {
+    color: #222 !important;
+  }
+    .home-intro :global(a) {
+  color: #0676cbff !important;
+}
+
+.home-intro :global(#main-section + div),
+.home-intro :global(#skill-section + div) {
+  font-size: 1.125rem; /* same as Tailwind text-lg */
+  line-height: 1.75;
+}
+
+.home-intro :global(#main-section + div p),
+.home-intro :global(#skill-section + div p),
+.home-intro :global(#skill-section + div li) {
+  font-size: inherit;
+}
+
       `}</style>
     </Base>
   );

@@ -11,4 +11,4 @@ key_achievements:
   - "Approach the data leakage issue"
   - "Final model reached 13.87% MAPE and 0.3 MAE (L/hr) on real-life dataset (Feature engineering that brings MAPE from ~55% to 13.87%"
   - "SHAP for feature importance analysis"
-  - "Summary Article: https://medium.com/@ameliablog/benchmarking-machine-learning-approach-for-real-world-fuel-consumption-prediction-in-icevs-f657408e888b"
+  - "Summary Article: [Medium](https://medium.com/@ameliablog/benchmarking-machine-learning-approach-for-real-world-fuel-consumption-prediction-in-icevs-f657408e888b)"
