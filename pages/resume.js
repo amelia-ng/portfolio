@@ -199,7 +199,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                         </div>
 
                         {children && (
-                          <div style={{ padding: "0.8rem 1.2rem 1rem" }}>
+                          <div style={{ padding: "0.8rem 1.2rem 1rem", fontSize: "1.2rem"}}>
                             {children}
                           </div>
                         )}

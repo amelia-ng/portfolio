@@ -24,20 +24,23 @@ main_section:
   header: "About Me"
   subheader: ""
   paragraphs:
-    - "I am a Data Scientist proficient in ML & AI applications. I am currently pursuing my Master's degree in Data Science at University of Michigan-Dearborn. Before my Master's, I had 3+ years of experience in Data Science and Analytics. My most recent role was Data Analyst at [Gearlaunch](https://www.linkedin.com/company/gearlaunch/posts/?feedView=all), where I was the **only** data analyst responsible for the entire company’s analytics system. Before that, I worked at [VCCorp Corporation](https://www.linkedin.com/company/vccorpcorporation/posts/?feedView=all), first as a Data Analyst and later promoted to Analyst Team Lead for a team of 4, responsible for the analytical growth of 7 media sites. I also love writing about Data Science on Medium [Amelia Nguyen](https://medium.com/@ameliablog), so please do check it out!"
-    - "I'm an enthusiastic learner (I built this portfolio website entirely on my own, with ZERO experience in CSS and JS!). I self-taught myself into a career in data and landed my first Data Analyst job when I was third-year undergraduate business student, then got promoted to Data Analyst - Team Lead just one month after graduation. With an upcoming Master’s Degree in Data Science, I am eager to continue bringing curiosity, discipline, and drive to every project and growing as a data science professional." 
+    - "I am a Data Scientist and AI enthusiast pursuing a Master's degree in Data Science at the University of Michigan–Dearborn. I'm passionate about applying ML and AI to the **Automotive Industry**. My interests include Computer Vision, Machine Larning, Deep Learning, and Intelligent Autonomous Driving Systems."
+    - "Before graduate school, I gained over three years of experience in Data Science and Analytics. Most recently, I was the sole Data Analyst at [Gearlaunch](https://www.linkedin.com/company/gearlaunch/posts/?feedView=all), leading the company's analytics infrastructure and decision-making. Before that, I worked at [VCCorp Corporation](https://www.linkedin.com/company/vccorpcorporation/posts/?feedView=all), first as a Data Analyst and later promoted to Analyst Team Lead for a team of 4, responsible for the analytical growth of 7 large digital media platform."
+    - "I enjoy continuously learning and building, and I'm excited to contribute to next-generation mobility through AI-driven solutions for Autonomous Driving, ADAS, and Intelligent Autonomous Driving Systems. I also love writing about Data Science on Medium [Amelia Nguyen](https://medium.com/@ameliablog), so please do check it out!"
 
 
 skills_section:
   header: "Skills"
   subheader: ""
   paragraphs:
-    - "**AI and ML**: Regression, Classification, Tree-Based Models (Decision Trees, Random Forest, Gradient/XGBoost), Deep Learning (Neural Networks, CNNs, RNNs), Time Series Analysis, K-Means Clustering, Recommendation System."
-    - "**Languages & Frameworks**: Python (Pandas, Scikit-learn, NumPy, Matplotlib, Seaborn, Tensorflow, PyTorch), SQL, PySpark."
-    - "**Analytics**: Data Modeling, ETL, Data Mining, Segmentation, A/B Testing, Analytical Reporting."
-    - "**Big Data Platforms:** Apache Spark, PySpark, Hadoop, Google Cloud Platform (Big Query, Vertex AI, Google Datastore)"
-    - "**Collaboration Tools:** Git, GitHub, Jupyter Notebook, Google Colab, Microsoft Office."
-    - "**Data Visualization and BI Tools:** Tableau, Power BI, Looker, SAP, SAP Cloud, Excel."
+    - "**Machine Learning**: Supervised Learning (Regression, Decision Trees, Random Forests, XGBoost, LightGBM, CatBoost, SVM, Naive Bayes, KNN), Unsupervised Learning (K-Means, Clustering, PCA), Deep Learning (CNNs, RNNs, LSTM, Transformer), Reinforcement Learning, Recommendation Systems, Anomaly Detection, Time Series Forecasting, Feature Engineering, Model Evaluation, Hyperparameter Optimization"
+    - "**Artificial Intelligence**: Computer Vision (Object Detection, Image Classification,Large Language Models (LLMs), Generative AI, Agentic AI, AI Agents, Prompt Engineering, Retrieval-Augmented Generation (RAG), Hugging Face, OpenCode"
+    - "**Programming**: Python, SQL, PySpark, Git, Bash"
+    - "**Libraries & Frameworks**: Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn, Statsmodels, Keras, TensorFlow, PyTorch."
+    - "**Data Engineering**: Apache Spark, Hadoop HDFS, Airflow, ETL/ELT, Data Warehousing"
+    - "**Cloud & MLOps**: Google Cloud Platform (BigQuery, Vertex AI, Cloud Storage), Docker, MLflow, GitHub Actions, REST APIs"
+    - "**Automotive & Intelligent Systems**: Kalman Filtering, Sensor Fusion, Robotics, Autonomous Driving, ADAS, State Estimation, Control Systems, Simulation"
+    - "**Visualization & Analytics**: Tableau, Power BI, Metabase, Google Analytics, Excel (Pivot Tables, Power Query), SAP HANA, SAP Analytics Cloud"
     
 experience:
   - title: "Data Analyst"
