@@ -1,5 +1,5 @@
 ---
-title: "Fine-tuned RE-DETR model - Street Obstacle Detection"
+title: "RT-DETR for Street Obstacle Detection"
 date: 2026-06-25T00:00:00Z
 image: /images/post/rt-detr.png
 categories: ["Computer Vision", "AI"]
