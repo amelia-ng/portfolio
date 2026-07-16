@@ -3,7 +3,7 @@ title: "Resume"
 button:
   enable: true
   label: "Download Resume"
-  link:  "/files/Amelia_Nguyen_Data_Science.pdf"
+  link:  "/files/Amelia_Nguyen_ML_AI_Automotive.pdf"
   target: "_blank"
 ---
 
@@ -12,7 +12,7 @@ button:
   <Entry title="Master's in Data Science" date="2025 - 2027" position="University of Michigan - Dearborn">
     <ul>
       <li>• Concentration: Computational Intelligence, GPA: 4.0</li>
-      <li>• Relevant Coursework: Machine Learning and Computational Statistics, Regression Analysis, Database Systems, Big Data, Operations Research, Data Analytics & Modeling, Deep Learning, Natural Language Processing, Intelligent Systems.</li>
+      <li>• Relevant Coursework: Machine Learning and Computational Statistics, Regression Analysis, Database Systems, Big Data, Operations Research, Data Analytics & Modeling, Deep Learning, Advanced Artificial Intelligence, Optimization</li>
     </ul>
   </Entry>
 </Timeline>
@@ -21,7 +21,14 @@ button:
 
 <Section title="Experiences">
 <Timeline>
-  <Entry title="Data Analyst" date="2023 - 2025" position="Gearlaunch">
+
+  <Entry title="Research Assistant" date="Jun 2026 - Present" position="University of Michigan - Dearborn">
+    <ul>
+      <li>• Conducted Computer Vision research in emotion detection, identity recognition, and secure biometrics at the Trustworthy AI Lab.</li>
+    </ul>
+  </Entry>
+
+  <Entry title="Data Analyst" date="Nov 2023 - Jul 2025" position="Gearlaunch">
     <ul>
       <li>• Served as the **sole data analyst**, managing the company’s end-to-end internal analytics infrastructure and presenting business analysis insights directly to C-level leadership and department heads.</li>
       <li>• Designed and deployed **Machine Learning** (Regression, Random Forest, XGBoost) and **Time Series Analysis** (AR, ARIMA, SARIMAX) to support e-commerce executive strategy development, resulting in a 20% increase in annual sales KPI.</li>
@@ -30,7 +37,7 @@ button:
     </ul>
   </Entry>
 
-  <Entry title="Data Analyst Team Lead" date="2023" position="VCCorp Corporation">
+  <Entry title="Data Analyst Team Lead" date="May 2023 - Nov 2023" position="VCCorp Corporation">
     <ul>
       <li>• Managed a **team of four** to perform full-cycle **A/B testing** for **recommendation engines** deployment on **7** digital media websites, resulting in **10-30%** monthly gains in core web KPIs.</li>
       <li>• Designed and built automated A/B testing **evaluation pipelines** for the company’s internal platform and a client-facing product.</li>
@@ -38,7 +45,7 @@ button:
     </ul>
   </Entry>
 
-  <Entry title="Data Analyst" date="2021 - 2023" position="VCCorp Corporation">
+  <Entry title="Data Analyst" date="Mar 2021 - May 2023" position="VCCorp Corporation">
     <ul>
       <li>• Designed and monitored **30+ KPIs** of core products with automated dashboards and provided in-depth **ad-hoc** analysis for 5 digital publishing apps and websites.</li>
       <li>• Developed **user segmentation** that helped increase app notification system engagement to **30%** within 3 months.</li>
