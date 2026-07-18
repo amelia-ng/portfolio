@@ -3,7 +3,7 @@ title: "Resume"
 button:
   enable: true
   label: "Download Resume"
-  link:  "/files/Amelia_Nguyen_ML_AI_Automotive.pdf"
+  link:  "/files/Amelia_Nguyen_ML_AI_Scientist.pdf"
   target: "_blank"
 ---
 
