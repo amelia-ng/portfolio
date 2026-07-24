@@ -57,7 +57,7 @@ button:
 
 <Section title="Projects">
 
-  <Timeline>
+<Timeline>
 
   <Entry title="Street Obstacle Detection" date="June 2026">
       <ul>
