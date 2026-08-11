@@ -20,7 +20,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
   return (
     <Base title={frontmatter.title}>
       {/* Resume Content */}
-      <section className="section mt-1">
+      <section className="section">
         <div className="container">
           <div className="page-intro">
             <h1>{frontmatter.title}</h1>
@@ -36,7 +36,10 @@ export default function ResumePage({ frontmatter, mdxSource }) {
             )}
           </div>
           <div className="row">
-            <div className="lg:col-12" style={{ padding: "0 2rem" }}>
+            <div
+              className="lg:col-12"
+              style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "64rem" }}
+            >
               <MDXRemote
                 {...mdxSource}
                 components={{
@@ -112,7 +115,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                   ),
 
                   /* ── Entry: dot on line + card to the right ── */
-                  Entry: ({ date, title, position, children }) => (
+                  Entry: ({ date, title, position, multiRole, children }) => (
                     <div
                       style={{
                         position: "relative",
@@ -155,7 +158,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                             borderLeft: `4px solid ${primaryColor}`,
                           }}
                         >
-                          {date && (
+                          {position && (
                             <p
                               style={{
                                 color: primaryColor,
@@ -166,13 +169,13 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                                 margin: "0 0 0.25rem 0",
                               }}
                             >
-                              {date}
+                              {position}
                             </p>
                           )}
                           {title && (
                             <h4
                               style={{
-                                fontSize: "1.2rem",
+                                fontSize: "1rem",
                                 fontWeight: 500,
                                 margin: 0,
                                 heightSpacing: 1.15,
@@ -182,28 +185,71 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                               {title}
                             </h4>
                           )}
-                          {position && (
-                            <h4
+                          {date && (
+                            <p
                               style={{
-                                fontSize: "1.1rem",
-                                lineHeight: 1.75,
-                                fontWeight: 100,
-                                margin: 0,
                                 color: "#0e3fc7ff",
+                                fontSize: "0.95rem",
+                                fontWeight: 500,
+                                lineHeight: 1.4,
+                                margin: "0.25rem 0 0",
                               }}
                             >
-                              {position}
-                            </h4>
+                              {date}
+                            </p>
                           )}
                          
                         </div>
 
                         {children && (
-                          <div style={{ padding: "0.8rem 1.2rem 1rem", fontSize: "1.2rem"}}>
+                          <div
+                            style={{
+                              padding: multiRole
+                                ? "0 1.2rem 1rem"
+                                : "0.8rem 1.2rem 1rem",
+                              fontSize: "1rem",
+                            }}
+                          >
                             {children}
                           </div>
                         )}
                       </div>
+                    </div>
+                  ),
+
+                  /* A role and its dates inside a shared organization card. */
+                  Role: ({ title, date, first, children }) => (
+                    <div
+                      style={{
+                        marginTop: first ? 0 : "0.9rem",
+                        paddingTop: "0.5rem",
+                      }}
+                    >
+                      <h4
+                        style={{
+                          color: "#111827",
+                          fontSize: "1rem",
+                          fontWeight: 500,
+                          lineHeight: 1.3,
+                          margin: 0,
+                        }}
+                      >
+                        {title}
+                      </h4>
+                      {date && (
+                        <p
+                          style={{
+                            color: "#0e3fc7ff",
+                            fontSize: "0.95rem",
+                            fontWeight: 500,
+                            lineHeight: 1.4,
+                            margin: "0.2rem 0 0.55rem",
+                          }}
+                        >
+                          {date}
+                        </p>
+                      )}
+                      {children}
                     </div>
                   ),
 
@@ -227,23 +273,22 @@ export default function ResumePage({ frontmatter, mdxSource }) {
                         display: "list-item",
                         listStyle: "disc",
                         listStyleType: "disc",
-                        fontSize: "1.2rem",
-                        lineHeight: 1.6,
-                        marginBottom: "0.25rem",
-                      }}
+                        fontSize: "1rem",
+                        lineHeight: 1.3,
+                        }}
                     >
                       {children}
                     </li>
                   ),
 
                   p: ({ children }) => (
-                    <p style={{ fontSize: "1.2rem", lineHeight: 1.6, margin: "0 0 0.4rem" }}>
+                    <p style={{ fontSize: "1rem", lineHeight: 1.6, margin: "0 0 0.4rem" }}>
                       {children}
                     </p>
                   ),
 
                   h3: ({ children }) => (
-                    <h3 style={{ color: primaryColor, fontSize: "1.1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
+                    <h3 style={{ color: primaryColor, fontSize: "1rem", fontWeight: 700, margin: "0.5rem 0 0.25rem" }}>
                       {children}
                     </h3>
                   ),
@@ -258,7 +303,10 @@ export default function ResumePage({ frontmatter, mdxSource }) {
             </div>
           </div>
           <div className="row">
-            <div className="lg:col-12" style={{ padding: "0 2rem" }}>
+            <div
+              className="lg:col-12"
+              style={{ marginLeft: "auto", marginRight: "auto", maxWidth: "64rem" }}
+            >
               <div
                 style={{
                   display: "grid",
@@ -309,7 +357,7 @@ export default function ResumePage({ frontmatter, mdxSource }) {
           }
 
           .page-intro h1 {
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 400;
             line-height: 1.2;
             margin: 0;

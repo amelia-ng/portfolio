@@ -16,16 +16,34 @@ button:
       <li>• Relevant Coursework: Machine Learning and Computational Statistics, Regression Analysis, Database Systems, Big Data, Operations Research, Data Analytics & Modeling. Planned: Deep Learning, Advanced Artificial Intelligence, Optimization</li>
     </ul>
   </Entry>
+  
+  <Entry title="Bachelor's in Business Administration" date="2019 - 2023" position="Foreign Trade University">
+    <ul>
+      <li>• GPA: 3.8 </li>
+      <li>• Enrolled in the Advanced Program Collaborated with California State University-Fullerton. </li>
+      <li>• Research Competition won School Third Runner-up and Prospects Award.</li>
+      <li>• Excellent Academic Performance Scholarship </li>
+    </ul>
+  </Entry>
+
 </Timeline>
 </Section>
 
 <Section title="Experiences">
 <Timeline>
 
-  <Entry title="Research Assistant" date="Jun 2026 - Present" position="University of Michigan">
+  <Entry position="University of Michigan" multiRole>
+  <Role first title="Graduate Teaching Assistant" date="Aug 2026 - Present"> 
     <ul>
-      <li>• Conducted Computer Vision research experiments in emotion detection and secure biometrics at the Trustworthy AI Lab.</li>
+      <li>• Grade coursework and provide support for CIS 400 Programming Languages and CIS 541 Immersive Computing and Digital Twins. </li>
     </ul>
+  </Role>
+
+  <Role title="Research Assistant" date="Jun 2026 - Present" >
+    <ul>
+      <li>• Conducted Computer Vision research in emotion detection and secure biometrics at the Trustworthy AI Lab.</li>
+    </ul>
+  </Role>
   </Entry>
 
   <Entry title="Data Analyst" date="Nov 2023 - Jul 2025" position="Gearlaunch">
@@ -37,19 +55,22 @@ button:
     </ul>
   </Entry>
 
-  <Entry title="Data Analyst Team Lead" date="May 2023 - Nov 2023" position="VCCorp Corporation">
-    <ul>
-      <li>• Managed a **team of four** to perform full-cycle **A/B testing** (PySpark, Python, SQL, HDFS, ElasticSearch) for **recommendation engines** deployment on **7** digital media websites, resulting in **10-30%** monthly gains in core web KPIs.</li>
-      <li>• Designed and built automated A/B testing **evaluation pipelines** for the company’s internal platform and a client-facing product.</li>
-      <li>• Maintained primary responsibility for **advanced statistical analysis and Machine Learning** for **3** digital publishing platforms for product teams.</li>
-    </ul>
-  </Entry>
+  <Entry position="VCCorp Corporation" multiRole>
+    <Role first title="Data Analyst Team Lead" date="May 2023 - Nov 2023">
+      <ul>
+        <li>• Managed a **team of four** to perform full-cycle **A/B testing** (PySpark, Python, SQL, HDFS, ElasticSearch) for **recommendation engines** deployment on **7** digital media websites, resulting in **10-30%** monthly gains in core web KPIs.</li>
+        <li>• Designed and built automated A/B testing **evaluation pipelines** for the company’s internal platform and a client-facing product.</li>
+        <li>• Maintained primary responsibility for **advanced statistical analysis and Machine Learning** for **3** digital publishing platforms for product teams.</li>
+      </ul>
+    </Role>
 
-  <Entry title="Data Analyst" date="Mar 2021 - May 2023" position="VCCorp Corporation">
-    <ul>
-      <li>• Designed and monitored **30+ KPIs** of core products with automated dashboards and provided in-depth **ad-hoc** analysis for 5 digital publishing apps and websites.</li>
-      <li>• Developed **user segmentation** that helped increase app notification system engagement to **30%** within 3 months.</li>
-    </ul>
+  <Role title="Data Analyst" date="Mar 2021 - May 2023">
+      <ul>
+        <li>• Designed and monitored **30+ KPIs** of core products with automated dashboards and provided in-depth **ad-hoc** analysis for 5 digital publishing apps and websites.</li>
+        <li>• Developed **user segmentation** that helped increase app notification system engagement to **30%** within 3 months.</li>
+      </ul>
+    </Role>
+
   </Entry>
 </Timeline>
 
@@ -121,6 +142,7 @@ button:
 <Card>
 
 - **Machine Learning**: Supervised Learning (Regression, Decision Trees, Random Forests, XGBoost, LightGBM, CatBoost, SVM, Naive Bayes, KNN), Unsupervised Learning (K-Means, Clustering, PCA), Deep Learning (CNNs, RNNs, LSTM, Transformer), Reinforcement Learning, Recommendation Systems, Anomaly Detection, Time Series Forecasting, Feature Engineering, Model Evaluation, Hyperparameter Optimization
+
 - **Artificial Intelligence**: Computer Vision (Object Detection, Image Classification), Large Language Models (LLMs), Generative AI, Agentic AI, AI Agents, Prompt Engineering, Retrieval-Augmented Generation (RAG), Hugging Face, OpenCode
 - **Programming**: Python, SQL, PySpark, Git, Bash
 - **Libraries & Frameworks**: Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn, Statsmodels, Keras, TensorFlow, PyTorch.
