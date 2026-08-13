@@ -203,8 +203,15 @@ const Home = ({ main_section, skills_section }) => {
 
 .home-intro :global(#main-section + div),
 .home-intro :global(#skill-section + div) {
-  font-size: 1.125rem; /* same as Tailwind text-lg */
+  font-size: 1rem;
   line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .home-intro :global(#main-section + div),
+  .home-intro :global(#skill-section + div) {
+    font-size: 1.125rem; /* same as Tailwind text-lg */
+  }
 }
 
 .home-intro :global(#main-section + div p),

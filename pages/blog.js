@@ -60,21 +60,6 @@ const Blog = ({ posts, recent_posts, promotion }) => {
           alignItems: "stretch",
         }}
       >
-        {post.frontmatter.image && (
-          <Link href={href} className="w-full shrink-0 lg:w-auto">
-            <div
-              className="w-full lg:max-w-[320px]"
-              style={{
-                aspectRatio: "16 / 10",
-                overflow: "hidden",
-                borderRadius: "0.7rem",
-              }}
-            >
-              
-            </div>
-          </Link>
-        )}
-
         <div
           style={{
             flex: 1,
