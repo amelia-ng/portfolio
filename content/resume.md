@@ -39,9 +39,9 @@ button:
     </ul>
   </Role>
 
-  <Role title="Research Assistant" date="Jun 2026 - Present" >
+  <Role title="Graduate Research Assistant" date="Jun 2026 - Present" >
     <ul>
-      <li>• Conducted Computer Vision research in emotion detection and secure biometrics at the Trustworthy AI Lab.</li>
+      <li>• Conducted Computer Vision research in battery, emotion detection and secure biometrics at the Trustworthy AI Lab.</li>
     </ul>
   </Role>
   </Entry>
