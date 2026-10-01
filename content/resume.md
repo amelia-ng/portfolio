@@ -16,15 +16,6 @@ button:
       <li>• Relevant Coursework: Machine Learning and Computational Statistics, Regression Analysis, Database Systems, Big Data, Operations Research, Data Analytics & Modeling. Planned: Deep Learning, Advanced Artificial Intelligence, Optimization</li>
     </ul>
   </Entry>
-  
-  <Entry title="Bachelor's in Business Administration" date="2019 - 2023" position="Foreign Trade University">
-    <ul>
-      <li>• GPA: 3.8 </li>
-      <li>• Enrolled in the Advanced Program Collaborated with California State University-Fullerton. </li>
-      <li>• Research Competition won School Third Runner-up and Prospects Award.</li>
-      <li>• Excellent Academic Performance Scholarship </li>
-    </ul>
-  </Entry>
 
 </Timeline>
 </Section>

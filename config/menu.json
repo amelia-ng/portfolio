@@ -6,19 +6,19 @@
     },
     {
       "name": "Resume",
-      "url": "/resume"
+      "url": "/#resume"
+    },
+    {
+      "name": "Publications",
+      "url": "/#publication"
     },
     {
       "name": "Projects",
-      "url": "/projects"
+      "url": "/#projects"
     },
     {
       "name": "Blog",
       "url": "/blog"
-    },
-    {
-      "name": "AI-in-Automotive",
-      "url": "https://amelia-ng.github.io/ai-automotive-resources/"
     }
   ],
   "footer": [
@@ -28,19 +28,19 @@
     },
     {
       "name": "Resume",
-      "url": "/resume"
+      "url": "/#resume"
+    },
+    {
+      "name": "Publications",
+      "url": "/#publication"
     },
     {
       "name": "Projects",
-      "url": "/projects"
+      "url": "/#projects"
     },
     {
       "name": "Blog",
       "url": "/blog"
-    },
-    {
-      "name": "AI-in-Automotive",
-      "url": "https://amelia-ng.github.io/ai-automotive-resources/"
     }
   ]
 }

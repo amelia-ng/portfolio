@@ -1,7 +1,7 @@
 ---
-title: "Vehicle Defect Detection (YOLO, FastAPI, Docker, AWS)"
+title: "Vehicle Defect Detection (Computer Vision, FastAPI, Docker, AWS)"
 date: 2026-08-25T00:00:00Z
-image: vehicle-defect.png
+image: images/post/vehicle-defect.png
 categories: ["Computer Vision", "AI", "Fast API", "Docker", "AWS"]
 featured: true
 draft: false

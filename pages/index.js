@@ -1,7 +1,9 @@
 import Base from "@layouts/Baseof";
 import ImageFallback from "@layouts/components/ImageFallback";
-import { getListPage } from "@lib/contentParser";
+import { getListPage, getSinglePage } from "@lib/contentParser";
+import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
+import dateFormat from "@lib/utils/dateFormat";
 import Link from "next/link";
 import {
   FaEnvelope,
@@ -11,7 +13,7 @@ import {
   FaUniversity,
 } from "react-icons/fa";
 
-const Home = ({ main_section, skills_section }) => {
+const Home = ({ main_section, publications = [], projects = [] }) => {
   const contactInfo = {
     university: "MS Data Science at University of Michigan-Dearborn",
     mail: "amelianguyen.ds@gmail.com",
@@ -104,32 +106,62 @@ const Home = ({ main_section, skills_section }) => {
                 </div>
               )}
 
-              {skills_section && (
-                <div>
-                  <div id="skill-section">
-                    {skills_section.header &&
-                      markdownify(skills_section.header, "h1", "section-title mb-6")}
-                    {skills_section.subheader &&
-                      markdownify(skills_section.subheader, "h2", "mb-0")}
-                  </div>
-                  <div className="rounded border border-border px-6 pt-6 dark:border-darkmode-border">
-                    <div className="row">
-                      {skills_section.paragraphs?.map((p, i) => (
-                        <div
-                          key={i}
-                          className="mb-3 md:col-12"
-                        >
-                          {markdownify(
-                            p,
-                            "p",
-                            "text-base md:text-lg leading-relaxed text-black dark:text-darkmode-light"
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+              <section id="resume" className="mt-12">
+                {markdownify("Resume", "h1", "section-title mb-6")}
+                <a className="home-action-link inline-block rounded border border-primary px-6 py-3 font-semibold text-primary transition duration-200" href="/files/Amelia_Nguyen_ML_AI_Data_Scientist.pdf" download>
+                  Download Resume
+                </a>
+              </section>
+              <section id="publication" className="mt-12">
+                {markdownify("Publications", "h1", "section-title mb-6")}
+                {publications.length ? (
+                  <ol className="w-full list-decimal space-y-6 pl-6">
+                    {publications.map((publication, index) => (
+                      <li key={publication.title || index} className="publication-entry">
+                        <h3 className="publication-title mb-1">{publication.link ? <a href={publication.link}>{publication.title}</a> : publication.title}</h3>
+                        {publication.authors && markdownify(publication.authors, "p", "mb-1")}
+                        {(publication.venue || publication.paper_url) && (
+                          <p className="mb-0">
+                            {publication.venue && markdownify(`${publication.venue}${publication.year ? ` · ${publication.year}` : ""}`, "span")}
+                            {publication.paper_url && <>{publication.venue && " | "}<a href={publication.paper_url} target="_blank" rel="noopener noreferrer">paper</a></>}
+                          </p>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                ) : <p>Research publications will be added here.</p>}
+              </section>
+              <section id="projects" className="mt-12">
+                {markdownify("Projects", "h1", "section-title mb-8")}
+                <div className="row">
+                  {projects.map((project) => {
+                    const href = project.frontmatter.project_link || `/projects/${project.slug}`;
+                    return (
+                      <div className="mb-6 col-12" key={project.slug}>
+                        <article className="home-project-card flex flex-col gap-4 rounded-xl border border-border bg-white p-4 shadow-sm transition duration-200 dark:border-darkmode-border dark:bg-darkmode-light lg:flex-row lg:items-start">
+                          {project.frontmatter.image && <a href={href} target={project.frontmatter.project_link ? "_blank" : undefined} rel={project.frontmatter.project_link ? "noopener noreferrer" : undefined} className="block w-full shrink-0 lg:w-1/3"><ImageFallback className="aspect-[16/10] w-full rounded-lg object-cover" src={project.frontmatter.image} alt={project.frontmatter.title} width={640} height={420} /></a>}
+                          <div className="flex min-w-0 flex-1 flex-col">
+                            <h3 className="mb-1 text-xl font-medium"><a href={href} target={project.frontmatter.project_link ? "_blank" : undefined} rel={project.frontmatter.project_link ? "noopener noreferrer" : undefined}>{project.frontmatter.title}</a></h3>
+                            {project.frontmatter.date && <p className="project-date mb-2">{dateFormat(project.frontmatter.date)}</p>}
+                            <p className="project-description mb-3">{project.frontmatter.description || project.content}</p>
+                            {project.frontmatter.key_achievements?.length > 0 && (
+                              <div className="project-achievements">
+                                <h4 className="mb-1 text-base font-semibold">Key Achievements</h4>
+                                <ul className="list-disc space-y-1 pl-5">
+                                  {project.frontmatter.key_achievements.map((achievement, index) => (
+                                    <li key={`${project.slug}-achievement-${index}`}>{markdownify(achievement)}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            )}
+                          </div>
+                        </article>
+                      </div>
+                    );
+                  })}
                 </div>
-              )}
+                <div className="text-center"><Link href="/projects" className="home-action-link inline-block rounded border border-primary px-6 py-3 font-semibold text-primary transition duration-200">See more projects</Link></div>
+      </section>
             </div>
           </div>
         </div>
@@ -193,6 +225,12 @@ const Home = ({ main_section, skills_section }) => {
 .home-intro :global(li) {
     font-weight: 400 !important;
   }
+
+.home-intro :global(p),
+.home-intro :global(li) {
+  font-size: 1rem;
+  line-height: 1.55;
+}
   
     .home-intro :global(*) {
     color: #222 !important;
@@ -201,23 +239,55 @@ const Home = ({ main_section, skills_section }) => {
   color: #0676cbff !important;
 }
 
-.home-intro :global(#main-section + div),
-.home-intro :global(#skill-section + div) {
-  font-size: 1rem;
-  line-height: 1.75;
-}
-
 @media (min-width: 768px) {
-  .home-intro :global(#main-section + div),
-  .home-intro :global(#skill-section + div) {
-    font-size: 1.125rem; /* same as Tailwind text-lg */
+  .home-intro :global(p),
+  .home-intro :global(li) {
+    font-size: 1.125rem;
   }
 }
 
-.home-intro :global(#main-section + div p),
-.home-intro :global(#skill-section + div p),
-.home-intro :global(#skill-section + div li) {
-  font-size: inherit;
+.home-intro :global(.home-project-card) {
+  border-color: #dbe4f0;
+}
+
+.home-intro :global(.home-project-card:hover),
+.home-intro :global(.home-project-card:focus-within) {
+  border-color: #1d4ed8;
+  box-shadow: 0 14px 32px rgba(29, 78, 216, 0.18);
+  transform: translateY(-2px);
+}
+
+.home-intro :global(.home-action-link:hover),
+.home-intro :global(.home-action-link:focus-visible) {
+  border-color: #1d4ed8;
+  box-shadow: 0 14px 32px rgba(29, 78, 216, 0.18);
+  transform: translateY(-2px);
+}
+
+.home-intro :global(.project-description) {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.home-intro :global(.project-date),
+.home-intro :global(.project-achievements li) {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.home-intro :global(.publication-entry),
+.home-intro :global(.publication-entry p) {
+  line-height: 1.35;
+}
+
+.home-intro :global(.publication-title) {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .home-intro :global(.publication-title) {
+    font-size: 1.125rem;
+  }
 }
 
       `}</style>
@@ -231,12 +301,14 @@ export default Home;
 export const getStaticProps = async () => {
   const homepage = await getListPage("content/_index.md");
   const { frontmatter } = homepage;
-  const { main_section, skills_section } = frontmatter;
+  const { main_section, publications = [] } = frontmatter;
+  const projects = sortByDate(getSinglePage("content/projects")).slice(0, 10);
 
   return {
     props: {
       main_section,
-      skills_section: skills_section || null,
+      publications,
+      projects,
     },
   };
 };

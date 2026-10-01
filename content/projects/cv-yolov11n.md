@@ -1,5 +1,5 @@
 ---
-title: "YOLOv11n for Street Obstacle Detection"
+title: "Street Obstacle Detection using YOLOv11n"
 date: 2026-06-21T00:00:00Z
 image: /images/post/yolo-street.png
 categories: ["Computer Vision", "AI"]
