@@ -108,8 +108,8 @@ const Home = ({ main_section, publications = [], projects = [] }) => {
 
               <section id="resume" className="mt-12">
                 {markdownify("Resume", "h1", "section-title mb-6")}
-                <a className="home-action-link inline-block rounded border border-primary px-6 py-3 font-semibold text-primary transition duration-200" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/files/Amelia_Nguyen_ML_AI_Data_Scientist.pdf`} download>
-                  Download Resume
+                <a className="home-action-link inline-block rounded border border-primary px-6 py-3 font-semibold text-primary transition duration-200" href={`https://drive.google.com/file/d/1pXM2LsyftuLeDvuegB7fHSsM8xXa8lCG/view?usp=sharing`} target="_blank" rel="noopener noreferrer">
+                  View Resume
                 </a>
               </section>
               <section id="publication" className="mt-12">
